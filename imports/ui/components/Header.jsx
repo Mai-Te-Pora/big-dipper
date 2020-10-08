@@ -214,6 +214,7 @@ export default class Header extends Component {
                                 </DropdownToggle>
                                 <DropdownMenu right>
                                     <DropdownItem onClick={(e) => this.handleLanguageSwitch('en-US', e)}><T>navbar.english</T></DropdownItem>
+                                    <DropdownItem onClick={(e) => this.handleLanguageSwitch('fr-FR', e)}><T>navbar.french</T></DropdownItem>
                                     <DropdownItem onClick={(e) => this.handleLanguageSwitch('es-ES', e)}><T>navbar.spanish</T></DropdownItem>
                                     {/* <DropdownItem onClick={(e) => this.handleLanguageSwitch('it-IT', e)}><T>navbar.italian</T></DropdownItem> */}
                                     <DropdownItem onClick={(e) => this.handleLanguageSwitch('pl-PL', e)}><T>navbar.polish</T></DropdownItem>

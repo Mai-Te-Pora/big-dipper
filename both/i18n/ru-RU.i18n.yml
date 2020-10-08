@@ -33,6 +33,7 @@ navbar:
     votingPower: 'право голоса'
     lang: "RU"
     english: "English"
+    french: "Français"
     spanish: "Español"
     italian: "Italiano"
     polish: "Polski"
