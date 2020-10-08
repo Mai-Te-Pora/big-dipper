@@ -27,7 +27,7 @@ export default class Validators extends Component{
         super(props);
         let state = {
             monikerDir: 1,
-            votingPowerDir: -1,
+            votingPowerDir: 1,
             uptimeDir: -1,
             commissionDir: 1,
             selfDelDir: 1,
