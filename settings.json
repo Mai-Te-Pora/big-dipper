@@ -18,16 +18,10 @@
 
             {
                 "denom": "swth",
-                "displayName": "swth",
-                "displayNamePlural": "swth",
+                "displayName": "SWTH",
+                "displayNamePlural": "SWTH",
                 "fraction": 100000000
-            },
-            {
-                "denom": "umuon",
-                "displayName": "MUON",
-                "displayNamePlural": "MUONS",
-                "fraction": 1000000
-            } 
+            }
         ],
         "gasPrice": 0.02,
         "coingeckoId": "switcheo"
@@ -43,13 +37,13 @@
     }, 
     "params":{ 
         "startHeight": 0,
-        "defaultBlockTime": 5000,
+        "defaultBlockTime": 1000,
         "blockInterval": 15000,
         "consensusInterval": 1000,
         "statusInterval":7500,
         "signingInfoInterval": 1800000,
         "proposalInterval": 5000,
-        "missedBlocksInterval": 60000,
+        "missedBlocksInterval": 36000,
         "delegationInterval": 900000
     }
 }
