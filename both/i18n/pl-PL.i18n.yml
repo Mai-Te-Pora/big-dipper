@@ -24,8 +24,8 @@ common:
     retry: 'Spróbuj ponownie'
     rewards: 'Nagrody'
 navbar:
-    siteName: 'Wielki Wóz'
-    version: 'beta'
+    siteName: 'Tradehub Explorer'
+    version: '0.33.7'
     validators: 'Walidatorzy'
     blocks: 'Bloki'
     transactions: 'Transakcje'

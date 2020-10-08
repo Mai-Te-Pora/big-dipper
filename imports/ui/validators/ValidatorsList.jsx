@@ -10,8 +10,8 @@ import qs from 'querystring';
 const T = i18n.createComponent();
 
 const PriorityEnum = {
-    'moniker': {code: 0, dirKey: 'monikerDir', name: 'moniker'},
     'votingPower': {code: 1, dirKey: 'votingPowerDir', name: 'votingPower'},
+    'moniker': {code: 0, dirKey: 'monikerDir', name: 'moniker'},
     'uptime': {code: 2, dirKey: 'uptimeDir', name: 'uptime'},
     'commission': {code: 3, dirKey: 'commissionDir', name: 'commission'},
     'selfDel': {code: 4, dirKey: 'selfDelDir', name: 'selfDel'},
@@ -27,7 +27,7 @@ export default class Validators extends Component{
         super(props);
         let state = {
             monikerDir: 1,
-            votingPowerDir: 1,
+            votingPowerDir: -1,
             uptimeDir: -1,
             commissionDir: 1,
             selfDelDir: 1,

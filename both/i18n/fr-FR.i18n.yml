@@ -24,8 +24,8 @@ common:
     retry: 'Retry'
     rewards: 'Rewards'
 navbar:
-    siteName: 'The Big Dipper'
-    version: 'beta'
+    siteName: 'Tradehub Explorer'
+    version: '0.33.7'
     validators: 'Validators'
     blocks: 'Blocks'
     transactions: 'Transactions'

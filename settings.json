@@ -1,6 +1,6 @@
 {
     "public":{
-        "chainName": "Switcheo Tradehub",
+        "chainName": "Tradehub",
         "chainId": "switcheo-tradehub-1",
         "slashingWindow": 3600,
         "uptimeWindow": 250,
