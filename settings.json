@@ -17,11 +17,12 @@
         "coins": [
 
             {
-                "denom": "swth",
+                "denom": "SWTH",
                 "displayName": "SWTH",
                 "displayNamePlural": "SWTH",
                 "fraction": 100000000
             }
+            
         ],
         "gasPrice": 0.02,
         "coingeckoId": "switcheo"

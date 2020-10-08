@@ -1,4 +1,4 @@
-$forbole-red: #bd081c;
+$forbole-red: #063C4F;
 $primary: $forbole-red !default;
 
 @import "materia/variables";
@@ -512,15 +512,15 @@ body {
    .account-dropdown{
     padding: 0 1rem 0 0.5rem;
     margin-top: -3px;
-    color: #bd081c;
+    color: #063C4F;
     font-weight: bold;
     position:relative;
     z-index: 1;
     
 
     .dropdown-toggle{
-      background-color:#bd081c;
-      border: solid 0.05rem #bd081c;
+      background-color:#063C4F;
+      border: solid 0.05rem #063C4F;
 
     }
 
