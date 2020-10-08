@@ -1,0 +1,56 @@
+{
+    "public":{
+        "chainName": "Switcheo Tradehub",
+        "chainId": "switcheo-tradehub-1",
+        "slashingWindow": 3600,
+        "uptimeWindow": 250,
+        "initialPageSize": 30,
+        "secp256k1": false,
+        "bech32PrefixAccAddr": "swth",
+        "bech32PrefixAccPub": "swthpub",
+        "bech32PrefixValAddr": "swthvaloper",
+        "bech32PrefixValPub": "swthvaloperpub",
+        "bech32PrefixConsAddr": "swthvalcons",
+        "bech32PrefixConsPub": "swthvalconspub",
+        "bondDenom": "swth",
+        "powerReduction": 1000000,
+        "coins": [
+
+            {
+                "denom": "swth",
+                "displayName": "swth",
+                "displayNamePlural": "swth",
+                "fraction": 100000000
+            },
+            {
+                "denom": "umuon",
+                "displayName": "MUON",
+                "displayNamePlural": "MUONS",
+                "fraction": 1000000
+            } 
+        ],
+        "gasPrice": 0.02,
+        "coingeckoId": "switcheo"
+    },  
+    "genesisFile": "https://neoeconomy.io/json/genesis.json",
+    "remote":{
+        "rpc":"http://135.181.19.50:26659",
+        "lcd":"http://135.181.19.50:1317"
+    }, 
+    "debug": {
+        "startTimer": true,
+        "readGenesis": true
+    }, 
+    "params":{ 
+        "startHeight": 0,
+        "defaultBlockTime": 5000,
+        "blockInterval": 15000,
+        "consensusInterval": 1000,
+        "statusInterval":7500,
+        "signingInfoInterval": 1800000,
+        "proposalInterval": 5000,
+        "missedBlocksInterval": 60000,
+        "delegationInterval": 900000
+    }
+}
+
