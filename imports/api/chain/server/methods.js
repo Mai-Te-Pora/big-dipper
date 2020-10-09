@@ -140,7 +140,7 @@ Meteor.methods({
 
                     currentDate = new Date().getTime()
                     startDate = 1597924800000
-                    weeksSince = Math.round((currentDate - startDate) / (7 * 24 * 60 * 60 * 1000));
+                    weeksSince = Math.round((currentDate - startDate) / (7 * 24 * 60 * 60 * 1000)) / 100;
                     
                     switch(weeksSince) {
                         case 1:
@@ -186,7 +186,7 @@ Meteor.methods({
                         case 21:
                             chainStates.inflation = 1.376538979 / 100
                         default:
-                            chainStates.inflation = weeksSince
+                            chainStates.inflation = 1.376538979 / 100
                     }
 
                     url = LCD + '/minting/annual-provisions';
