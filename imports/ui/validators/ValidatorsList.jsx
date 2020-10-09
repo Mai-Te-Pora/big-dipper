@@ -10,8 +10,8 @@ import qs from 'querystring';
 const T = i18n.createComponent();
 
 const PriorityEnum = {
-    'votingPower': {code: 1, dirKey: 'votingPowerDir', name: 'votingPower'},
-    'moniker': {code: 0, dirKey: 'monikerDir', name: 'moniker'},
+    'votingPower': {code: 0, dirKey: 'votingPowerDir', name: 'votingPower'},
+    'moniker': {code: 1, dirKey: 'monikerDir', name: 'moniker'},
     'uptime': {code: 2, dirKey: 'uptimeDir', name: 'uptime'},
     'commission': {code: 3, dirKey: 'commissionDir', name: 'commission'},
     'selfDel': {code: 4, dirKey: 'selfDelDir', name: 'selfDel'},

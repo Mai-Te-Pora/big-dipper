@@ -2,7 +2,7 @@
     "public":{
         "chainName": "Tradehub",
         "chainId": "switcheo-tradehub-1",
-        "stakingFraction": 100000000,
+        "stakingFraction": 1000000,
         "slashingWindow": 3600,
         "uptimeWindow": 250,
         "initialPageSize": 30,
