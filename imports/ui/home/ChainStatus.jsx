@@ -157,7 +157,7 @@ export default class ChainStatus extends React.Component {
                             <Card body>
                                 <CardTitle><T>chainStatus.latestHeight</T></CardTitle>
                                 <CardText>
-                                    <span className="display-4 value text-primary">{this.state.blockHeight}</span>
+                                    <span className="display-4 value text-primary">#{this.state.blockHeight}</span>
                                     {this.state.blockTime}
                                 </CardText>
                             </Card>

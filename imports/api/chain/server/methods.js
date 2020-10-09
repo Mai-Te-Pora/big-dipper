@@ -125,7 +125,7 @@ Meteor.methods({
                         console.log(e)
                     }
 
-                    url = LCD + '/minting/inflation';
+                    /*url = LCD + '/minting/inflation';
                     try{
                         response = HTTP.get(url);
                         let inflation = JSON.parse(response.content).result;
@@ -136,6 +136,57 @@ Meteor.methods({
                     catch(e){
                         console.log(url);
                         console.log(e);
+                    }*/
+
+                    currentDate = new Date().getTime()
+                    startDate = 1597924800000
+                    weeksSince = Math.round((currentDate - startDate) / (7 * 24 * 60 * 60 * 1000));
+                    
+                    switch(weeksSince) {
+                        case 1:
+                            chainStates.inflation = 1.92
+                        case 2:
+                            chainStates.inflation = 1.88832
+                        case 3:
+                            chainStates.inflation = 1.85716272
+                        case 4:
+                            chainStates.inflation = 1.826519535
+                        case 5:
+                            chainStates.inflation = 1.796381963
+                        case 6:
+                            chainStates.inflation = 1.76674166
+                        case 7:
+                            chainStates.inflation = 1.737590423
+                        case 8:
+                            chainStates.inflation = 1.708920181
+                        case 9:
+                            chainStates.inflation = 1.680722998
+                        case 10:
+                            chainStates.inflation = 1.652991069
+                        case 11:
+                            chainStates.inflation = 1.625716716
+                        case 12:
+                            chainStates.inflation = 1.59889239
+                        case 13:
+                            chainStates.inflation = 1.572510666
+                        case 14:
+                            chainStates.inflation = 1.54656424
+                        case 15:
+                            chainStates.inflation = 1.52104593
+                        case 16:
+                            chainStates.inflation = 1.495948672
+                        case 17:
+                            chainStates.inflation = 1.471265519
+                        case 18:
+                            chainStates.inflation = 1.446989638
+                        case 19:
+                            chainStates.inflation = 1.423114309
+                        case 20:
+                            chainStates.inflation = 1.399632923
+                        case 21:
+                            chainStates.inflation = 1.376538979
+                        default:
+                            chainStates.inflation = 1.376538979
                     }
 
                     url = LCD + '/minting/annual-provisions';

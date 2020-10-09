@@ -61,7 +61,7 @@ export default class Consensus extends Component{
                                             <Col md={2}>
                                                 <Row>
                                                     <Col md={12} xs={4}><CardSubtitle><T>common.height</T></CardSubtitle></Col>
-                                                    <Col md={12} xs={8}><span className="value">{numbro(this.props.consensus.votingHeight).format('0,0')}</span></Col>
+                                                    <Col md={12} xs={8}><span className="value">#{numbro(this.props.consensus.votingHeight).format('0,0')}</span></Col>
                                                 </Row>
                                             </Col>
                                             <Col md={2}>
