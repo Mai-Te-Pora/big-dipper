@@ -727,11 +727,11 @@ body {
       padding-left: 1rem;
       padding-right: 1rem;
   
-      .data {
-        &.proposer-priority, &.voting-power {
-          text-align: right;
-        }
-      }
+      //.data {
+        //&.proposer-priority, &.voting-power {
+        //  text-align: right;
+        //}
+      //}
   
       .header .voting-power {
         text-align: right;
