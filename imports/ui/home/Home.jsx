@@ -16,7 +16,7 @@ export default class Home extends Component{
     render() {
         return <div id="home">
             <Helmet>
-                <title>The Big Dipper | Switcheo Tradehub Explorer</title>
+                <title>Tradehub Explorer</title>
                 <meta name="description" content="Finance without limits, for lives without limits." />
             </Helmet>
             <ChainInfo/>
