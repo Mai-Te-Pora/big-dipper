@@ -251,9 +251,9 @@ body {
       text-overflow: ellipsis;
     }
   
-    th.voting-power, td.voting-power {
-      text-align: right;
-    }
+    //th.voting-power, td.voting-power {
+      //text-align: right;
+    //}
   
     &.random-validators th {
       &.moniker, &.voting-power {
