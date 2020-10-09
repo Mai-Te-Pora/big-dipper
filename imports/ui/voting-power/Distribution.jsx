@@ -25,13 +25,13 @@ export default class Distribution extends Component{
                 <Col md={9} xs={12} className="text-md-right"><ChainStates /></Col>
             </Row>
             <Row>
-                <Col md={6}><TwentyEighty /></Col>
-                <Col md={6}><ThirtyFour /></Col>
-            </Row>
-            <Row>
                 <Col>
                     <VotingPower />
                 </Col>
+            </Row>
+            <Row>
+                <Col md={6}><TwentyEighty /></Col>
+                <Col md={6}><ThirtyFour /></Col>
             </Row>
 
         </div>

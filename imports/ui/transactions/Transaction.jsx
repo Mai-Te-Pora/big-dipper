@@ -54,8 +54,8 @@ export default class Transaction extends Component{
                                 <Col md={8} className="value text-nowrap overflow-auto address">{tx.txhash}</Col>
                                 <Col md={4} className="label"><T>common.height</T></Col>
                                 <Col md={8} className="value">
-                                    <Link to={"/blocks/"+tx.height}>{numbro(tx.height).format("0,0")}</Link>
-                                    {tx.block()?<span> <TimeStamp time={tx.block().time}/></span>:null}
+                                    <Link to={"/blocks/"+tx.height}>#{numbro(tx.height).format("0,0")}</Link>
+                                    {tx.block()?<span> - <TimeStamp time={tx.block().time}/></span>:null}
                                 </Col>
                                 <Col md={4} className="label"><T>transactions.fee</T></Col>
                                 <Col md={8} className="value">{(tx.tx.value.fee.amount.length > 0)?tx.tx.value.fee.amount.map((fee,i) => {
