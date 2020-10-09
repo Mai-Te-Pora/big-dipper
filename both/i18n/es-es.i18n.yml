@@ -24,7 +24,7 @@ common:
     retry: 'Reintentar'
 navbar:
     siteName: 'Tradehub Explorer'
-    version: '0.33.7'
+    version: '1.8'
     validators: 'Validadores'
     blocks: 'Bloques'
     transactions: 'Transacciones'

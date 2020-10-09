@@ -25,7 +25,7 @@ common:
     rewards: 'Reward'
 navbar:
     siteName: 'Tradehub Explorer'
-    version: '0.33.7'
+    version: '1.8'
     validators: 'Validatori'
     blocks: 'Blocchi'
     transactions: 'Transazioni'

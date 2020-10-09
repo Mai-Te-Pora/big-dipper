@@ -24,7 +24,7 @@ common:
     retry: '重试'
 navbar:
     siteName: 'Tradehub Explorer'
-    version: '0.33.7'
+    version: '1.8'
     validators: '验证人'
     blocks: '区块'
     transactions: '交易'
