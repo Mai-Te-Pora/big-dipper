@@ -36,7 +36,7 @@ export default class ChainStates extends Component{
             if (this.props.coinStats.usd){
                 this.setState({
                     price: this.props.coinStats.usd,
-                    marketCap: numbro(this.props.coinStats.usd_market_cap).format("$0,0.00")
+                    marketCap: numbro(this.props.coinStats.usd_market_cap).format("$0,0")
                 })
             }
 
@@ -62,7 +62,7 @@ export default class ChainStates extends Component{
             if (this.props.coinStats.usd){
                 this.setState({
                     price: this.props.coinStats.usd,
-                    marketCap: numbro(this.props.coinStats.usd_market_cap).format("$0,0.00")
+                    marketCap: numbro(this.props.coinStats.usd_market_cap).format("$0,0")
                 })
             }
         }
