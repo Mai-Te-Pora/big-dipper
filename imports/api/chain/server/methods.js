@@ -144,49 +144,49 @@ Meteor.methods({
                     
                     switch(weeksSince) {
                         case 1:
-                            chainStates.inflation = 1.92
+                            chainStates.inflation = 1.92 / 100
                         case 2:
-                            chainStates.inflation = 1.88832
+                            chainStates.inflation = 1.88832 / 100
                         case 3:
-                            chainStates.inflation = 1.85716272
+                            chainStates.inflation = 1.85716272 / 100
                         case 4:
-                            chainStates.inflation = 1.826519535
+                            chainStates.inflation = 1.826519535 / 100
                         case 5:
-                            chainStates.inflation = 1.796381963
+                            chainStates.inflation = 1.796381963 / 100
                         case 6:
-                            chainStates.inflation = 1.76674166
+                            chainStates.inflation = 1.76674166 / 100
                         case 7:
-                            chainStates.inflation = 1.737590423
+                            chainStates.inflation = 1.737590423 / 100
                         case 8:
-                            chainStates.inflation = 1.708920181
+                            chainStates.inflation = 1.708920181 / 100
                         case 9:
-                            chainStates.inflation = 1.680722998
+                            chainStates.inflation = 1.680722998 / 100
                         case 10:
-                            chainStates.inflation = 1.652991069
+                            chainStates.inflation = 1.652991069 / 100
                         case 11:
-                            chainStates.inflation = 1.625716716
+                            chainStates.inflation = 1.625716716 / 100
                         case 12:
-                            chainStates.inflation = 1.59889239
+                            chainStates.inflation = 1.59889239 / 100
                         case 13:
-                            chainStates.inflation = 1.572510666
+                            chainStates.inflation = 1.572510666 / 100
                         case 14:
-                            chainStates.inflation = 1.54656424
+                            chainStates.inflation = 1.54656424 / 100
                         case 15:
-                            chainStates.inflation = 1.52104593
+                            chainStates.inflation = 1.52104593 / 100
                         case 16:
-                            chainStates.inflation = 1.495948672
+                            chainStates.inflation = 1.495948672 / 100
                         case 17:
-                            chainStates.inflation = 1.471265519
+                            chainStates.inflation = 1.471265519 / 100
                         case 18:
-                            chainStates.inflation = 1.446989638
+                            chainStates.inflation = 1.446989638 / 100
                         case 19:
-                            chainStates.inflation = 1.423114309
+                            chainStates.inflation = 1.423114309 / 100
                         case 20:
-                            chainStates.inflation = 1.399632923
+                            chainStates.inflation = 1.399632923 / 100
                         case 21:
-                            chainStates.inflation = 1.376538979
+                            chainStates.inflation = 1.376538979 / 100
                         default:
-                            chainStates.inflation = 1.376538979
+                            chainStates.inflation = weeksSince
                     }
 
                     url = LCD + '/minting/annual-provisions';
