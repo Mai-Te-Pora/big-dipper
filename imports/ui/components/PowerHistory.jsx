@@ -12,7 +12,7 @@ export default class PowerHistory extends React.Component {
         super(props);
         this.state = {
             tx : "",
-            diff: <span className={"text-"+((props.votingPower - props.prevVotingPower>0)?"success":"danger")+" vp-diff"}>({numbro(props.votingPower - props.prevVotingPower).format("+0,0")})</span>
+            diff: <span className={"text-"+((props.votingPower - props.prevVotingPower>0)?"success":"danger")+" vp-diff"}>({numbro((props.votingPower - props.prevVotingPower)/100).format("+0,0")})</span>
         }
 
         if (props.votingPower > 0){      
@@ -161,7 +161,7 @@ export default class PowerHistory extends React.Component {
                 <CardBody>
                     <Row>
                         <Col xs={2} className={(this.props.type == 'down' || this.props.type == 'remove')?'text-danger':(this.props.type == 'up'?'text-success':'text-warning')}><i className={changeClass}></i> </Col>
-                        <Col xs={10} sm={6} ><span className="voting-power">{numbro(this.props.prevVotingPower).format('0,0')}</span> <i className="material-icons text-info">arrow_forward</i> <span className="voting-power">{numbro(this.props.votingPower).format('0,0')}</span> {this.state.diff}</Col>
+                        <Col xs={10} sm={6} ><span className="voting-power">{numbro(this.props.prevVotingPower/100).format('0,0')}</span> <i className="material-icons text-info">arrow_forward</i> <span className="voting-power">{numbro(this.props.votingPower/100).format('0,0')}</span> {this.state.diff}</Col>
                         <Col xs={{size:10, offset:2}} sm={{offset:0, size:4}} className="text-secondary"><i className="fas fa-cube"></i> {numbro(this.props.height).format('0,0')}<br/><i className="far fa-clock"></i> {momemt.utc(this.props.time).format("D MMM YYYY, h:mm:ssa z")}</Col>
                     </Row>
                 </CardBody>
