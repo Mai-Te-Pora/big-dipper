@@ -8,6 +8,10 @@ $primary: $forbole-red !default;
 body {
     font-size: inherit !important;
   }
+
+  .uppercase { 
+    text-transform: uppercase; 
+  }
   
   .no-select {
     -webkit-touch-callout: none;

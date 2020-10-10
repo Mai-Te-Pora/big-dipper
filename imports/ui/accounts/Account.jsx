@@ -310,23 +310,23 @@ export default class AccountDetails extends Component{
                                 <Col md={6} lg={8}>
                                     <Row>
                                         <Col xs={4} className="label text-nowrap"><div className="available infinity" /><T>accounts.available</T></Col>
-                                        <Col xs={8} className="value text-right">{this.findCoin(this.state.available)}</Col>
+                                        <Col xs={8} className="value text-right uppercase">{this.findCoin(this.state.available)}</Col>
                                     </Row>
                                     <Row>
                                         <Col xs={4} className="label text-nowrap"><div className="delegated infinity" /><T>accounts.delegated</T></Col>
-                                        <Col xs={8} className="value text-right">{new Coin(this.state.delegated).toString(4)}</Col>
+                                        <Col xs={8} className="value text-right uppercase">{new Coin(this.state.delegated).toString(4)}</Col>
                                     </Row>
                                     <Row>
                                         <Col xs={4} className="label text-nowrap"><div className="unbonding infinity" /><T>accounts.unbonding</T></Col>
-                                        <Col xs={8} className="value text-right">{new Coin(this.state.unbonding).toString(4)}</Col>
+                                        <Col xs={8} className="value text-right uppercase">{new Coin(this.state.unbonding).toString(4)}</Col>
                                     </Row>
                                     <Row>
                                         <Col xs={4} className="label text-nowrap"><div className="rewards infinity" /><T>accounts.rewards</T></Col>
-                                        <Col xs={8} className="value text-right">{this.findCoin(this.state.rewards)}</Col>
+                                        <Col xs={8} className="value text-right uppercase">{this.findCoin(this.state.rewards)}</Col>
                                     </Row>
                                     {this.state.commission?<Row>
                                         <Col xs={4} className="label text-nowrap"><div className="commission infinity" /><T>validators.commission</T></Col>
-                                        <Col xs={8} className="value text-right">{this.findCoin(this.state.commission)}</Col>
+                                        <Col xs={8} className="value text-right uppercase">{this.findCoin(this.state.commission)}</Col>
                                     </Row>:null}
                                 </Col>
                                 <Col md={6} lg={4} className="total d-flex flex-column justify-content-end">
