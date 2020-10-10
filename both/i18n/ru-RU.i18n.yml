@@ -77,7 +77,7 @@ validators:
     randomValidators: 'Случайные Валидаторы'
     moniker: 'Кличка'
     uptime: 'Рабочее время'
-    selfPercentage: 'Сам%'
+    selfPercentage: 'Сам'
     commission: 'Комиссия'
     lastSeen: 'Последний увиденный'
     status: 'Статус'

@@ -63,17 +63,17 @@ export default class ChainStatus extends React.Component {
             switch (this.state.avgVotingPowerType){
             case "":
                 this.setState({
-                    votingPower: numbro(this.props.status.activeVotingPower).format('0,0.00a'),
+                    votingPower: numbro((this.props.status.activeVotingPower)/100).format('0,0.000a'),
                 });
                 break;
             case "h":
                 this.setState({
-                    votingPower: numbro(this.props.status.lastHourVotingPower).format('0,0.00a'),
+                    votingPower: numbro((this.props.status.lastHourVotingPower)/100).format('0,0.000a'),
                 });
                 break;
             case "d":
                 this.setState({
-                    votingPower: numbro(this.props.status.lastDayVotingPower).format('0,0.00a'),
+                    votingPower: numbro((this.props.status.lastDayVotingPower)/100).format('0,0.000a'),
                 });
                 break;
 
@@ -124,21 +124,21 @@ export default class ChainStatus extends React.Component {
             this.setState({
                 votingPowerText: <T>chainStatus.now</T>,
                 avgVotingPowerType: "",
-                votingPower: numbro(this.props.status.activeVotingPower).format('0,0.00a')
+                votingPower: numbro((this.props.status.activeVotingPower)/100).format('0,0.000a')
             })
             break;
         case "h":
             this.setState({
                 votingPowerText: "1h",
                 avgVotingPowerType: "h",
-                votingPower: numbro(this.props.status.lastHourVotingPower).format('0,0.00a')
+                votingPower: numbro((this.props.status.lastHourVotingPower)/100).format('0,0.000a')
             })
             break;
         case "d":
             this.setState({
                 votingPowerText: "1d",
                 avgVotingPowerType: "d",
-                votingPower: numbro(this.props.status.lastDayVotingPower).format('0,0.00a')
+                votingPower: numbro((this.props.status.lastDayVotingPower)/100).format('0,0.000a')
             })
             break;
 
@@ -200,7 +200,7 @@ export default class ChainStatus extends React.Component {
                                     </DropdownMenu>
                                 </UncontrolledDropdown>
                                 <CardTitle><T>chainStatus.onlineVotingPower</T> ({this.state.votingPowerText})</CardTitle>
-                                <CardText><span className="display-4 value text-primary">{this.state.votingPower}</span><T percent={numbro(this.state.bondedTokens/this.state.totalSupply).format("0.00%")} totalStakes={numbro(this.state.totalSupply/Coin.StakingCoin.fraction).format("0.00a")} denom={Coin.StakingCoin.displayName} denomPlural={Coin.StakingCoin.displayNamePlural}>chainStatus.fromTotalStakes</T></CardText>
+                                <CardText><span className="display-4 value text-primary">{this.state.votingPower/100}</span><T percent={numbro(this.state.bondedTokens/this.state.totalSupply).format("0.00%")} totalStakes={numbro(this.state.totalSupply/Coin.StakingCoin.fraction).format("0.00a")} denom={Coin.StakingCoin.displayName} denomPlural={Coin.StakingCoin.displayNamePlural}>chainStatus.fromTotalStakes</T></CardText>
                             </Card>
                         </Col>
                     </Row>

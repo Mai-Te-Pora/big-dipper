@@ -77,7 +77,7 @@ validators:
     randomValidators: 'Random Validators'
     moniker: 'Moniker'
     uptime: 'Uptime'
-    selfPercentage: 'Self%'
+    selfPercentage: 'Self'
     commission: 'Commission'
     lastSeen: 'Last Seen'
     status: 'Status'

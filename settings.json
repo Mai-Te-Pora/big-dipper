@@ -14,14 +14,14 @@
         "bech32PrefixConsAddr": "swthvalcons",
         "bech32PrefixConsPub": "swthvalconspub",
         "bondDenom": "swth",
-        "powerReduction": 100000000,
+        //"powerReduction": 100000000,
         "coins": [
 
             {
                 "denom": "swth",
                 "displayName": "SWTH",
                 "displayNamePlural": "SWTH",
-                "fraction": 100000000
+                "fraction": 1000000
             }
         ],
         "gasPrice": 0.02,

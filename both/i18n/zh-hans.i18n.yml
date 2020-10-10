@@ -76,7 +76,7 @@ validators:
     randomValidators: '随机验证人'
     moniker: '验证人代号'
     uptime: '上线时间比重'
-    selfPercentage: '自我委托%'
+    selfPercentage: '自我委托'
     commission: '佣金'
     lastSeen: '最后投票时间'
     status: '状态'
