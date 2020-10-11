@@ -140,53 +140,75 @@ Meteor.methods({
 
                     currentDate = new Date().getTime()
                     startDate = 1597924800000
-                    weeksSince = Math.round((currentDate - startDate) / (7 * 24 * 60 * 60 * 1000)); // why / 100?
-                    
-                    switch(weeksSince) {
+                    weeksSince = Math.round((currentDate - startDate) / (7 * 24 * 60 * 60 * 1000));
+
+                    switch(parseFloat(weeksSince)) {
                         case 1:
                             chainStates.inflation = 1.923076923 / 100
+                            break;
                         case 2:
                             chainStates.inflation = 1.891346154 / 100
+                            break;
                         case 3:
                             chainStates.inflation = 1.860138942 / 100
+                            break;
                         case 4:
                             chainStates.inflation = 1.82944665 / 100
+                            break;
                         case 5:
                             chainStates.inflation = 1.79926078 / 100
+                            break;
                         case 6:
                             chainStates.inflation = 1.769572977 / 100
+                            break;
                         case 7:
                             chainStates.inflation = 1.740375023 / 100
+                            break;
                         case 8:
                             chainStates.inflation = 1.711658835 / 100
+                            break;
                         case 9:
                             chainStates.inflation = 1.683416464 / 100
+                            break;
                         case 10:
                             chainStates.inflation = 1.655640093 / 100
+                            break;
                         case 11:
                             chainStates.inflation = 1.628322031 / 100
+                            break;
                         case 12:
                             chainStates.inflation = 1.601454718 / 100
+                            break;
                         case 13:
                             chainStates.inflation = 1.575030715 / 100
+                            break;
                         case 14:
                             chainStates.inflation = 1.549042708 / 100
+                            break;
                         case 15:
                             chainStates.inflation = 1.523483503 / 100
+                            break;
                         case 16:
                             chainStates.inflation = 1.498346026 / 100
+                            break;
                         case 17:
                             chainStates.inflation = 1.473623316 / 100
+                            break;
                         case 18:
                             chainStates.inflation = 1.449308531 / 100
+                            break;
                         case 19:
                             chainStates.inflation = 1.425394941 / 100
+                            break;
                         case 20:
                             chainStates.inflation = 1.401875924 / 100
+                            break;
                         case 21:
                             chainStates.inflation = 1.378744971 / 100
+                            break;
                         default:
                             chainStates.inflation = 1.378744971 / 100
+                            break;
                     }
 
                     url = LCD + '/minting/annual-provisions';
