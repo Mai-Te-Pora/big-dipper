@@ -12,14 +12,6 @@ body {
   .uppercase { 
     text-transform: uppercase; 
   }
-
-  .self-delegation {
-    text-align: right;
-  }
-
-  .commission {
-    text-align: center;
-  }
   
   .no-select {
     -webkit-touch-callout: none;
@@ -677,6 +669,10 @@ body {
   }
   
   @media only screen and (max-width: 767px) {
+    .block-info .fa-clock {
+      display: none;
+    }
+    
     div {
       &#main, &#transaction, &#block {
         padding-bottom: 4.85rem;

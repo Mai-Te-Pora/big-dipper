@@ -52,7 +52,7 @@ export default class ValidatorDelegations extends Component{
         }
         else{
             return <Card>
-                <CardHeader>{(this.state.numDelegatiors > 0)?this.state.numDelegatiors:'No'} <T>common.delegators</T> {(this.state.numDelegatiors > 0)?<small className="text-secondary">({new Coin(this.props.tokens/this.state.numDelegatiors).toString(2)}s / delegator)</small>:''}</CardHeader>
+                <CardHeader>{(this.state.numDelegatiors > 0)?this.state.numDelegatiors:'No'} <T>common.delegators</T> {(this.state.numDelegatiors > 0)?<small className="text-secondary">({new Coin(this.props.tokens/this.state.numDelegatiors).toString(2)} / delegator)</small>:''}</CardHeader>
                 <CardBody className="list">
                     <Container fluid>
                         <Row className="header text-nowrap d-none d-lg-flex">

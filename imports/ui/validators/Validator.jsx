@@ -252,9 +252,9 @@ export default class Validator extends Component{
                                 <Col sm={4} className="label"><T>validators.delegatorShares</T></Col>
                                     <Col sm={8} className="value">{numbro(this.props.validator.delegator_shares).format('0,0.00')}</Col>
                                     {(this.state.currentUserDelegation)?<Col sm={4} className="label"><T>validators.userDelegateShares</T></Col>:''}
-                                    {(this.state.currentUserDelegation)?<Col sm={8} className="value">{numbro(this.state.currentUserDelegation.shares/100).format('0,0.00')}</Col>:''}
+                                    {(this.state.currentUserDelegation)?<Col sm={8} className="value">{numbro(this.state.currentUserDelegation.shares).format('0,0.00')}</Col>:''}
                                 <Col sm={4} className="label"><T>validators.tokens</T></Col>
-                                    <Col sm={8} className="value">{numbro(this.props.validator.tokens/100).format('0,0.00')}</Col>
+                                    <Col sm={8} className="value">{numbro(this.props.validator.tokens).format('0,0.00')}</Col>
                                     {(this.props.validator.jailed)?<Col xs={12} >
                                 <Row><Col md={4} className="label"><T>validators.unbondingHeight</T></Col>
                                             <Col md={8} className="value">{numbro(this.props.validator.unbonding_height).format('0,0')}</Col>

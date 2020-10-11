@@ -228,7 +228,7 @@ Meteor.startup(function(){
                     if ((now.getUTCHours() == 0) && (now.getUTCMinutes() == 0) && (now.getUTCSeconds() == 0)){
                         aggregateDaily();
                     }
-                }, 100)
+                }, 1000)
             }
         }
     })

@@ -80,6 +80,6 @@ export default class Coin {
 		if (formatter) {
 			amount = numbro(amount).format(formatter)
 		}
-		return `${amount} ${Coin.StakingCoin.displayName}`;
+		return `${numbro(amount).format('0,0.00000000')} ${Coin.StakingCoin.displayName}`;
 	}
 }

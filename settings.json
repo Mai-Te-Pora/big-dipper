@@ -4,7 +4,7 @@
         "chainId": "switcheo-tradehub-1",
         "stakingFraction": 100000000,
         "slashingWindow": 3600,
-        "uptimeWindow": 250,
+        "uptimeWindow": 100,
         "initialPageSize": 30,
         "secp256k1": false,
         "bech32PrefixAccAddr": "swth",
@@ -14,20 +14,19 @@
         "bech32PrefixConsAddr": "swthvalcons",
         "bech32PrefixConsPub": "swthvalconspub",
         "bondDenom": "swth",
-        //"powerReduction": 100000000,
         "coins": [
 
             {
                 "denom": "swth",
                 "displayName": "SWTH",
                 "displayNamePlural": "SWTH",
-                "fraction": 1000000
+                "fraction": 100000000
             }
         ],
         "gasPrice": 0.02,
         "coingeckoId": "switcheo"
     },  
-    "genesisFile": "https://neoeconomy.io/json/genesis.json",
+    "genesisFile": "https://raw.githubusercontent.com/vincentgeneste/big-dipper/master/genesis.json",
     "remote":{
         "rpc":"http://135.181.19.50:26659",
         "lcd":"http://135.181.19.50:1317"
@@ -38,13 +37,13 @@
     }, 
     "params":{ 
         "startHeight": 0,
-        "defaultBlockTime": 100,
+        "defaultBlockTime": 1000,
         "blockInterval": 15000,
-        "consensusInterval": 100,
+        "consensusInterval": 1000,
         "statusInterval":7500,
         "signingInfoInterval": 1800000,
         "proposalInterval": 5000,
-        "missedBlocksInterval": 36000,
+        "missedBlocksInterval": 60000,
         "delegationInterval": 900000
     }
 }
