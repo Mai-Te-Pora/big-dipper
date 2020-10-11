@@ -142,6 +142,8 @@ Meteor.methods({
                     startDate = 1597924800000
                     weeksSince = Math.round((currentDate - startDate) / (7 * 24 * 60 * 60 * 1000));
 
+                    console.log('weeksSince Start: ' + weeksSince)
+
                     switch(parseFloat(weeksSince)) {
                         case 1:
                             chainStates.inflation = 1.923076923 / 100
@@ -210,6 +212,8 @@ Meteor.methods({
                             chainStates.inflation = 1.378744971 / 100
                             break;
                     }
+
+                    console.log('chainStates.inflation: ' + chainStates.inflation)
 
                     url = LCD + '/minting/annual-provisions';
                     try{
