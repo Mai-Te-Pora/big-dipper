@@ -1,0 +1,405 @@
+{
+    "genesis_time": "2020-08-14T07:32:27.856700491Z",
+    "chain_id": "switcheo-tradehub-1",
+    "consensus_params": {
+      "block": {
+        "max_bytes": "22020096",
+        "max_gas": "-1",
+        "time_iota_ms": "1000"
+      },
+      "evidence": {
+        "max_age_num_blocks": "100000",
+        "max_age_duration": "172800000000000"
+      },
+      "validator": {
+        "pub_key_types": [
+          "ed25519"
+        ]
+      }
+    },
+    "app_hash": "",
+    "app_state": {
+      "broker": {},
+      "oracle": {
+        "oracles": [],
+        "results": []
+      },
+      "staking": {
+        "params": {
+          "unbonding_time": "2592000000000000",
+          "max_validators": 11,
+          "max_entries": 7,
+          "historical_entries": 0,
+          "bond_denom": "swth"
+        },
+        "last_total_power": "0",
+        "last_validator_powers": null,
+        "validators": null,
+        "delegations": null,
+        "unbonding_delegations": null,
+        "redelegations": null,
+        "exported": false
+      },
+      "book": null,
+      "genutil": {
+        "gentxs": [
+          {
+            "type": "cosmos-sdk/StdTx",
+            "value": {
+              "msg": [
+                {
+                  "type": "cosmos-sdk/MsgCreateValidator",
+                  "value": {
+                    "description": {
+                      "moniker": "switcheo",
+                      "identity": "",
+                      "website": "",
+                      "security_contact": "",
+                      "details": ""
+                    },
+                    "commission": {
+                      "rate": "0.100000000000000000",
+                      "max_rate": "0.200000000000000000",
+                      "max_change_rate": "0.010000000000000000"
+                    },
+                    "min_self_delegation": "1",
+                    "delegator_address": "swth1hexzxh3apqpqzzchhgynks2xr8ar8qvdf3m9cw",
+                    "validator_address": "swthvaloper1hexzxh3apqpqzzchhgynks2xr8ar8qvd58d2u7",
+                    "pubkey": "swthvalconspub1zcjduepqlmpc4qkztwg0dlyyxxn8h8t35p3sycj9npaelpsuk7d8rq2z4mvsr00e4c",
+                    "value": {
+                      "denom": "swth",
+                      "amount": "100000000000"
+                    }
+                  }
+                }
+              ],
+              "fee": {
+                "amount": [],
+                "gas": "200000"
+              },
+              "signatures": [
+                {
+                  "pub_key": {
+                    "type": "tendermint/PubKeySecp256k1",
+                    "value": "AoU2VT5YhaSCGdGArq/oSTIk+Mj6ltaEHPVm473ektlm"
+                  },
+                  "signature": "l9jVSmocQHw9yvHGuWmtNkTVTw33IAHp8vuh+hFgJdJqVm6u/vvujAx7u0NBu2Mg6BfgqzjGkEFZhTNr7PoS3Q=="
+                }
+              ],
+              "memo": "090a3457e13ee2b1f5ba9690565993b825f1a78d@172.34.56.117:26656"
+            }
+          }
+        ]
+      },
+      "ft": null,
+      "lockproxypip1": null,
+      "ccm": {
+        "params": {
+          "chain_id_in_poly_net": "5"
+        }
+      },
+      "supply": {
+        "supply": []
+      },
+      "btcx": null,
+      "mint": {
+        "minter": {
+          "inflation": "0.000000000000000000",
+          "annual_provisions": "0.000000000000000000"
+        },
+        "params": {
+          "mint_denom": "swth",
+          "inflation_rate_change": "0.000000000000000000",
+          "inflation_max": "0.000000000000000000",
+          "inflation_min": "0.000000000000000000",
+          "goal_bonded": "0.670000000000000000",
+          "blocks_per_year": "6311520"
+        }
+      },
+      "coin": {
+        "tokens": [
+          {
+            "name": "Switcheo",
+            "symbol": "swth",
+            "denom": "swth",
+            "decimals": "8",
+            "native_decimals": "8",
+            "blockchain": "neo",
+            "chain_id": "4",
+            "asset_id": "32e125258b7db0a0dffde5bd03b2b859253538ab",
+            "is_active": true,
+            "is_collateral": false,
+            "lockproxy_hash": "",
+            "delegated_supply": "100000000000000000",
+            "originator": "swth1mw90en8tcqnvdjhp64qmyhuq4qasvhy25dpmvw"
+          }
+        ]
+      },
+      "nonce": null,
+      "leverage": null,
+      "autodeleverage": {},
+      "insurance": null,
+      "bank": {
+        "send_enabled": true
+      },
+      "headersync": null,
+      "auth": {
+        "params": {
+          "max_memo_characters": "256",
+          "tx_sig_limit": "7",
+          "tx_size_cost_per_byte": "10",
+          "sig_verify_cost_ed25519": "590",
+          "sig_verify_cost_secp256k1": "1000"
+        },
+        "accounts": [
+          {
+            "type": "cosmos-sdk/Account",
+            "value": {
+              "address": "swth1hexzxh3apqpqzzchhgynks2xr8ar8qvdf3m9cw",
+              "coins": [
+                {
+                  "denom": "swth",
+                  "amount": "5000000000000000"
+                }
+              ],
+              "public_key": null,
+              "account_number": "0",
+              "sequence": "0"
+            }
+          },
+          {
+            "type": "cosmos-sdk/Account",
+            "value": {
+              "address": "swth12c40srask3qhv645ryrc3sa45eq596m6nuax3l",
+              "coins": [
+                {
+                  "denom": "swth",
+                  "amount": "1000000000000"
+                }
+              ],
+              "public_key": null,
+              "account_number": "0",
+              "sequence": "0"
+            }
+          },
+          {
+            "type": "cosmos-sdk/Account",
+            "value": {
+            "address": "swth15dw0lxz32gtpndehp6s9xjt0ay7jdv5jfw2let",
+            "coins": [
+              {
+                "denom": "swth",
+                "amount": "1000000000000"
+              }
+            ],
+            "public_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          }
+        },
+        {
+          "type": "cosmos-sdk/Account",
+          "value": {
+            "address": "swth1gj6ep7spuchh7xct2fhkxe97sld38yupz30ml3",
+            "coins": [
+              {
+                "denom": "swth",
+                "amount": "1000000000000"
+              }
+            ],
+            "public_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          }
+        },
+        {
+          "type": "cosmos-sdk/Account",
+          "value": {
+            "address": "swth13e6w53vl0a97tnesk0urhup53psqxgwmsdk0np",
+            "coins": [
+              {
+                "denom": "swth",
+                "amount": "1000000000000"
+              }
+            ],
+            "public_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          }
+        },
+        {
+          "type": "cosmos-sdk/Account",
+          "value": {
+          "address": "swth15l9dhz6788268tdqull2ey79md0tjrcxet83wp",
+          "coins": [
+            {
+              "denom": "swth",
+              "amount": "1000000000000"
+            }
+          ],
+          "public_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        }
+      },
+      {
+        "type": "cosmos-sdk/Account",
+        "value": {
+          "address": "swth1ex0e3g7zkwxntcw4qv803rm7yjsc9grjynfad6",
+          "coins": [
+            {
+              "denom": "swth",
+              "amount": "1000000000000"
+            }
+          ],
+          "public_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        }
+      }
+    ]
+  },
+  "distribution": {
+    "params": {
+      "community_tax": "0.000000000000000000",
+      "base_proposer_reward": "0.010000000000000000",
+      "bonus_proposer_reward": "0.040000000000000000",
+      "withdraw_addr_enabled": true
+    },
+    "fee_pool": {
+      "community_pool": null
+    },
+    "delegator_withdraw_infos": null,
+    "previous_proposer": "",
+    "outstanding_rewards": null,
+    "validator_accumulated_commissions": null,
+    "validator_historical_rewards": null,
+    "validator_current_rewards": null,
+    "delegator_starting_infos": null,
+    "validator_slash_events": null
+  },
+  "pricing": {
+    "Prices": {}
+  },
+  "order": null,
+  "position": null,
+  "params": null,
+  "subaccount": null,
+  "slashing": {
+    "params": {
+      "signed_blocks_window": "36000",
+      "min_signed_per_window": "0.900000000000000000",
+      "downtime_jail_duration": "3600000000000",
+      "slash_fraction_double_sign": "0.050000000000000000",
+      "slash_fraction_downtime": "0.001000000000000000"
+    },
+    "signing_infos": {},
+    "missed_blocks": {}
+  },
+  "market": {
+    "markets": []
+  },
+  "liquidation": {},
+  "profile": {
+    "profiles": [
+      {
+        "address": "swth197kwqmzdwn50sakljwz4qxpw3ngpew9dnkhdyz",
+        "username": "open_interest",
+        "twitter": ""
+      },
+      {
+        "address": "swth1s762lf8rnv3myffw4s8m5kn4gvruftp8uuk46w",
+        "username": "open_orders",
+        "twitter": ""
+      },
+      {
+        "address": "swth1c7ptc87hkd54e3r7zjy92q29xkq7t79wvj5dsw",
+        "username": "insurance",
+        "twitter": ""
+      },
+      {
+        "address": "swth12uxz5eayngcls6lx55j9g28npen6z5fr7rkjww",
+        "username": "liquidation",
+        "twitter": ""
+      },
+      {
+        "address": "swth17xpfvakm2amg962yls6f84z3kell8c5l08fkcy",
+        "username": "fee",
+        "twitter": ""
+      },
+      {
+        "address": "swth1jv65s3grqf6v6jl3dp4t6c9t9rk99cd8cpw26x",
+        "username": "distribution",
+        "twitter": ""
+      },
+      {
+        "address": "swth1xxh3p9vvg3xpnd4uw8yzkp7rpnfyvc0h9vx6yr",
+        "username": "slashing",
+        "twitter": ""
+      },
+      {
+        "address": "swth1mx5e3jkxvzf8frl7cl8m69264ctn0shlkh8j4d",
+        "username": "staking",
+        "twitter": ""
+      },
+      {
+        "address": "swth1gwqac243g2z3vryqsev6acq965f9ttwhx9n7d3",
+        "username": "bank",
+        "twitter": ""
+      },
+      {
+        "address": "swth1m3h30wlvsf8llruxtpukdvsy0km2kum8h0dw5e",
+        "username": "mint",
+        "twitter": ""
+      },
+      {
+        "address": "swth1hh6fc0pcsggzlsqhl7mxzyyvvw5rd5r9cyv77k",
+        "username": "auth",
+        "twitter": ""
+      },
+      {
+        "address": "swth1d4e35hk3gk4k6t5gh02dcm923z8ck86qeha3ck",
+        "username": "inflation",
+        "twitter": ""
+      },
+      {
+        "address": "swth10d07y265gmmuvt4z0w9aw880jnsr700j9uen92",
+        "username": "gov",
+        "twitter": ""
+      },
+      {
+        "address": "swth10lheg7wgh3drep5frjuzj6wt7tluw0rn324x28",
+        "username": "upgrade",
+        "twitter": ""
+      },
+      {
+        "address": "swth1xntzx8qf42p2tfzxgy4jxukfl9eq242gcepcq8",
+        "username": "crisis",
+        "twitter": ""
+      },
+      {
+        "address": "swth1a6p9p7mkuz2txj68ruf6w0dmu5w34c2zffnsmv",
+        "username": "evidence",
+        "twitter": ""
+      },
+      {
+        "address": "swth1atn6enzwsq95tdsw2jvz9aa33020e4y4lxzk37",
+        "username": "genutil",
+        "twitter": ""
+      },
+      {
+        "address": "swth1tygms3xhhs3yv487phx3dw4a95jn7t7l79lgu6",
+        "username": "not_bonded_pool",
+        "twitter": ""
+      },
+      {
+        "address": "swth1fl48vsnmsdzcv85q5d2q4z5ajdha8yu329re2w",
+        "username": "bonded_pool",
+        "twitter": ""
+      }
+    ]
+  },
+  "inflation": null
+  }
+  }
+  
