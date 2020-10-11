@@ -207,7 +207,7 @@ export default class Header extends Component {
                                 </span>}
                             <LedgerModal isOpen={this.state.isSignInOpen} toggle={this.toggleSignIn} refreshApp={this.props.refreshApp} handleLoginConfirmed={this.shouldLogin()?this.handleLoginConfirmed:null}/>
                         </NavItem>*/}
-                        {/*<NavItem>
+                        <NavItem>
                             <UncontrolledDropdown inNavbar>
                                 <DropdownToggle nav caret>
                                     <T>navbar.lang</T>
@@ -223,7 +223,7 @@ export default class Header extends Component {
                                     <DropdownItem onClick={(e) => this.handleLanguageSwitch('zh-Hans', e)}><T>navbar.simChinese</T></DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledDropdown>
-                        </NavItem>*/}
+                        </NavItem>
                     </Nav>
                 </Collapse>
             </Navbar>
