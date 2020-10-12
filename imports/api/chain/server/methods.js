@@ -209,7 +209,7 @@ Meteor.methods({
                             chainStates.inflation = 1.378744971 / 100
                             break;
                         default:
-                            chainStates.inflation = 1.378744971 / 100
+                            chainStates.inflation = 1.35 / 100
                             break;
                     }
 
