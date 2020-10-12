@@ -37,7 +37,7 @@ getRemovedValidators = (prevValidators, validators) => {
 }
 
 getValidatorProfileUrl = (identity) => {
-    if (identity.length == 16){
+    if (identity.length >= 16){
         let response = HTTP.get(`https://keybase.io/_/api/1.0/user/lookup.json?key_suffix=${identity}&fields=pictures`)
         if (response.statusCode == 200) {
             let them = response.data.them
