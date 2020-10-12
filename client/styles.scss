@@ -211,7 +211,7 @@ body {
       &.validator-info div.data {
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
+        //text-overflow: ellipsis;
   
         span.moniker {
           line-height: 1.5;
@@ -674,6 +674,16 @@ body {
   }
   
   @media only screen and (max-width: 767px) {
+    .activity .card-body div {
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
+
+    .col-md-9 {
+      padding-right: 10px !important;
+      padding-left: 10px !important;
+    }
+
     .block-info .fa-clock {
       display: none;
     }
