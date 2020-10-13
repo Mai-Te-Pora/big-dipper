@@ -252,7 +252,7 @@ export default class AccountDetails extends Component{
 
     findCoin(coins){
         let finder = (coins).find(({denom}) => denom === this.state.denom);
-        let coinFinder = finder ? new Coin(finder.amount, finder.denom).toString(4) : null;
+        let coinFinder = finder ? new Coin(finder.amount, finder.denom).toString(8) : null;
         return coinFinder
     }
 
@@ -314,11 +314,11 @@ export default class AccountDetails extends Component{
                                     </Row>
                                     <Row>
                                         <Col xs={4} className="label text-nowrap"><div className="delegated infinity" /><T>accounts.delegated</T></Col>
-                                        <Col xs={8} className="value text-right uppercase">{new Coin(this.state.delegated).toString(4)}</Col>
+                                        <Col xs={8} className="value text-right uppercase">{new Coin(this.state.delegated).toString(8)}</Col>
                                     </Row>
                                     <Row>
                                         <Col xs={4} className="label text-nowrap"><div className="unbonding infinity" /><T>accounts.unbonding</T></Col>
-                                        <Col xs={8} className="value text-right uppercase">{new Coin(this.state.unbonding).toString(4)}</Col>
+                                        <Col xs={8} className="value text-right uppercase">{new Coin(this.state.unbonding).toString(8)}</Col>
                                     </Row>
                                     <Row>
                                         <Col xs={4} className="label text-nowrap"><div className="rewards infinity" /><T>accounts.rewards</T></Col>
@@ -337,7 +337,7 @@ export default class AccountDetails extends Component{
                                     <Row>
                                         <Col xs={4} className="label d-flex align-self-end"><div className="infinity" /><T>accounts.total</T></Col>
                                         <Col xs={8} className="value text-right">{this.findCoin(this.state.total)}</Col>
-                                        <Col xs={12} className="dollar-value text-right text-secondary">~{numbro((this.findValue(this.state.total))/Coin.StakingCoin.fraction*this.state.price).format("$0,0.00a")} ({numbro(this.state.price).format("$0,0.0000")}/{Coin.StakingCoin.displayName})</Col>
+                                        <Col xs={12} className="dollar-value text-right text-secondary">~{numbro((this.findValue(this.state.total))/Coin.StakingCoin.fraction*this.state.price).format("$0,0.00a")} ({numbro(this.state.price).format("$0,0.00000000")}/{Coin.StakingCoin.displayName})</Col>
                                     </Row>
                                 </Col>
                             </Row>
