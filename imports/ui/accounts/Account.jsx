@@ -337,7 +337,7 @@ export default class AccountDetails extends Component{
                                     <Row>
                                         <Col xs={4} className="label d-flex align-self-end"><div className="infinity" /><T>accounts.total</T></Col>
                                         <Col xs={8} className="value text-right">{this.findCoin(this.state.total)}</Col>
-                                        <Col xs={12} className="dollar-value text-right text-secondary">~{numbro((this.findValue(this.state.total))/Coin.StakingCoin.fraction*this.state.price).format("$0,0.00a")} ({numbro(this.state.price).format("$0,0.00000000")}/{Coin.StakingCoin.displayName})</Col>
+                                        <Col xs={12} className="dollar-value text-right text-secondary">~{numbro((this.findValue(this.state.total))/Coin.StakingCoin.fraction*this.state.price).format("$0,0.00a")} ({numbro(this.state.price).format("$0,0.0000")}/{Coin.StakingCoin.displayName})</Col>
                                     </Row>
                                 </Col>
                             </Row>
