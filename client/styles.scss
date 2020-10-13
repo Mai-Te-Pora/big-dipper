@@ -506,7 +506,7 @@ body {
     }
   
     .total .value {
-      font-size: 1.5em;
+      font-size: 1.25em;
       transform: translateY(3px);
     }
 
@@ -674,6 +674,12 @@ body {
   }
   
   @media only screen and (max-width: 767px) {
+    .delegation-info div {
+      width: 100%;
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+
     .activity .card-body div {
       display: inline-block;
       margin-left: 0.5rem;
