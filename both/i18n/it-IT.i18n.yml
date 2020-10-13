@@ -219,6 +219,8 @@ activities:
     withMoniker: 'con moniker'
     withTitle: 'con titolo'
     withA: 'con un (male) / una (female)'
+    withAmount: 'with <span class="text-info">{$amount}</span>'
+    ofAmount: 'of <span class="text-info">{$amount}</span>'
 messageTypes:
     send: 'Invia'
     multiSend: 'Invio multipo'

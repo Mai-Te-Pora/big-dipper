@@ -219,6 +219,8 @@ activities:
     withMoniker: 'z monikerem'
     withTitle: 'pod tytułem'
     withA: 'razem z'
+    withAmount: 'with <span class="text-info">{$amount}</span>'
+    ofAmount: 'of <span class="text-info">{$amount}</span>'
 messageTypes:
     send: 'Wysłał'
     multiSend: 'Wysłał Multi'

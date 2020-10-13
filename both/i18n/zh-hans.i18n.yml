@@ -218,6 +218,8 @@ activities:
     withMoniker: '而验证人代号为'
     withTitle: '治理提案主题为'
     withA: '投了'
+    withAmount: 'with <span class="text-info">{$amount}</span>'
+    ofAmount: 'of <span class="text-info">{$amount}</span>'
 messageTypes:
     send: '发送'
     multiSend: '多重发送'

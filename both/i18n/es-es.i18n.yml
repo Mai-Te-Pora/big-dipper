@@ -218,6 +218,8 @@ activities:
     withMoniker: 'con el moniker'
     withTitle: 'con el título'
     withA: 'con'
+    withAmount: 'with <span class="text-info">{$amount}</span>'
+    ofAmount: 'of <span class="text-info">{$amount}</span>'
 messageTypes:
     send: 'Enviar'
     multiSend: 'Multi Envío'

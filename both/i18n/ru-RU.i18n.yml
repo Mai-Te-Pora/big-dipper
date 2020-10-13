@@ -210,6 +210,8 @@ activities:
     withMoniker: 'с кличкой'
     withTitle: 'с названием'
     withA: 'с'
+    withAmount: 'with <span class="text-info">{$amount}</span>'
+    ofAmount: 'of <span class="text-info">{$amount}</span>'
 messageTypes:
     send: 'Отправить'
     multiSend: 'Отправить многократно'
