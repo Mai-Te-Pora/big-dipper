@@ -16,7 +16,7 @@ export default class AccountUnbondings extends Component{
     render(){
         let numUnbondings = this.props.unbonding.length;
         return <Card>
-            <CardHeader>{(numUnbondings > 0)?numUnbondings:<T>accounts.no</T>} <T>accounts.unbonding</T>{(numUnbondings>1)?<T>accounts.plural</T>:''}</CardHeader>
+            <CardHeader>{(numUnbondings > 0)?numUnbondings:<T>accounts.no</T>}<T>accounts.unbonding</T>{(numUnbondings>1)?<T>accounts.plural</T>:''}</CardHeader>
             {(numUnbondings > 0)?<CardBody className="list overflow-auto">
                 <Container fluid>
                     <Row className="header text-nowrap d-none d-lg-flex">
@@ -34,7 +34,7 @@ export default class AccountUnbondings extends Component{
                             <Col md={7}>{u.entries.map((entry,j) =>
                                 <Row key={j}>
                                     <Col md={6}>
-                                        {new Coin(entry.balance, 'SWTH').toString(8)}
+                                        {numbro(entry.balance).format("0,0")}
                                     </Col>
                                     <Col md={6}>
                                         {moment.utc(entry.completion_time).fromNow()}
