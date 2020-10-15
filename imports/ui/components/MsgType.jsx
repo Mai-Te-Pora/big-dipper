@@ -8,9 +8,9 @@ export const MsgType = (props) => {
     switch (props.type){
     // bank
     case "cosmos-sdk/MsgSend":
-        return <Badge color="success"><T>messageTypes.send</T></Badge>
+        return <Badge color="secondary"><T>messageTypes.send</T></Badge>
     case "cosmos-sdk/MsgMultiSend":
-        return <Badge color="success"><T>messageTypes.multiSend</T></Badge>
+        return <Badge color="secondary"><T>messageTypes.multiSend</T></Badge>
         
         // staking
     case "cosmos-sdk/MsgCreateValidator":
@@ -34,11 +34,11 @@ export const MsgType = (props) => {
         
         // distribution
     case "cosmos-sdk/MsgWithdrawValidatorCommission":
-        return <Badge color="secondary"><T>messageTypes.withdrawComission</T></Badge>;
+        return <Badge color="success"><T>messageTypes.withdrawComission</T></Badge>;
     case "cosmos-sdk/MsgWithdrawDelegationReward":
-        return <Badge color="secondary"><T>messageTypes.withdrawReward</T></Badge>;
+        return <Badge color="success"><T>messageTypes.withdrawReward</T></Badge>;
     case "cosmos-sdk/MsgModifyWithdrawAddress":
-        return <Badge color="secondary"><T>messgeTypes.modifyWithdrawAddress</T></Badge>;
+        return <Badge color="success"><T>messgeTypes.modifyWithdrawAddress</T></Badge>;
 
         // slashing
     case "cosmos-sdk/MsgUnjail":
