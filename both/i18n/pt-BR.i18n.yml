@@ -177,7 +177,7 @@ proposals:
     amount: 'Quantidade'
     recipient: 'Recebedor'
     changes: 'Alterações'
-    subspace: 'Subespaço'
+    subspace: 'Topic'
 votingPower:
     distribution: 'Distribuição do poder de voto'
     pareto: 'Princípio de Pareto (regra 20/80)'

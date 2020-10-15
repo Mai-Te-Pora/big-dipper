@@ -13,6 +13,14 @@ body {
     text-transform: uppercase; 
   }
 
+  .proposal .mb-2 {
+    margin-bottom: 0 !important;
+  }
+
+  .proposal-list .status .d-sm-inline {
+    margin-left: 0.5rem;
+  }
+
   .activity .card-body p div {
     display: inline-block;
     margin-left: 5px;

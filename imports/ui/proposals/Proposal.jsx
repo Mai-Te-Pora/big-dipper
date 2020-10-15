@@ -131,6 +131,7 @@ export default class Proposal extends Component{
     }
 
     populateChartData() {
+        const powerReduction = Meteor.settings.public.powerReduction || Coin.StakingCoin.fraction;
         const optionOrder = {'Yes': 0, 'Abstain': 1, 'No': 2, 'NoWithVeto': 3};
         let votes = this.props.proposal.votes?this.props.proposal.votes.sort(
             (vote1, vote2) => vote2['votingPower'] - vote1['votingPower']
@@ -173,7 +174,7 @@ export default class Proposal extends Component{
             let optionTotal = ds.metadata().totalVotingPower[data.option];
             let percentage = numbro(data.votingPower/total).format('0.00%');
             let optionPercentage = numbro(data.votingPower/optionTotal).format('0.00%');
-            return `<p>Voting Power: ${data.votingPower}</p>
+            return `<p>Voting Power: ${numbro(data.votingPower/powerReduction).format('0,0.00000000')}</p>
                     <p>${percentage} out of all votes</p>
                     <p>${optionPercentage} out of all ${data.option} votes</p>`;
         }
@@ -399,7 +400,7 @@ export default class Proposal extends Component{
                                     <Col xs={12}><Card>
                                         <CardHeader>
                                             <Nav tabs className='card-header-tabs'>
-                                                {['Bar', 'All', 'Yes', 'Abstain', 'No', 'No with Veto'].map((option)=>
+                                                {['Bar', 'All', 'Yes', 'Abstain', 'No', 'NoWithVeto'].map((option)=>
                                                     <NavItem key={option}><NavLink className='no-select' active={this.state.breakDownSelection==option}
                                                         onClick={() => this.setState({breakDownSelection: option})}>
                                                         {option=='Bar'?'All (Bar)':option}
