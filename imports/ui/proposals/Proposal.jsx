@@ -412,10 +412,10 @@ export default class Proposal extends Component{
                                             <TabContent activeTab={this.state.breakDownSelection=='Bar'?'bar':'pie'}>
                                                 <TabPane tabId="bar">
                                                     <Progress multi>
-                                                        <Progress bar animated color="success" value={this.state.yesPercent}><T>proposals.yes</T> {numbro(this.state.yesPercent).format("0.00")}%</Progress>
-                                                        <Progress bar animated color="warning" value={this.state.abstainPercent}><T>proposals.abstain</T> {numbro(this.state.abstainPercent).format("0.00")}%</Progress>
-                                                        <Progress bar animated color="danger" value={this.state.noPercent}><T>proposals.no</T> {numbro(this.state.noPercent).format("0.00")}%</Progress>
-                                                        <Progress bar animated color="info" value={this.state.noWithVetoPercent}><T>proposals.noWithVeto</T> {numbro(this.state.noWithVetoPercent).format("0.00")}%</Progress>
+                                                        <Progress bar animated color="success" value={this.state.yesPercent}>{numbro(this.state.yesPercent).format("0.00")}%</Progress>
+                                                        <Progress bar animated color="warning" value={this.state.abstainPercent}>{numbro(this.state.abstainPercent).format("0.00")}%</Progress>
+                                                        <Progress bar animated color="danger" value={this.state.noPercent}>{numbro(this.state.noPercent).format("0.00")}%</Progress>
+                                                        <Progress bar animated color="info" value={this.state.noWithVetoPercent}>{numbro(this.state.noWithVetoPercent).format("0.00")}%</Progress>
                                                     </Progress>
                                                 </TabPane>
                                                 <TabPane tabId="pie">
@@ -429,7 +429,7 @@ export default class Proposal extends Component{
                                         <Card body className="tally-info">
                                             <em>
                                                 <T _purify={false} percent={numbro(this.state.totalVotes/totalVotingPower*100).format("0.00%")}>proposals.percentageVoted</T><br/>
-                                                {this.state.proposalValid?<T _props={{className:'text-success'}} tentative={(!this.state.voteEnded)?'(tentatively) ':''} _purify={false}>proposals.validMessage</T>:(this.state.voteEnded)?<T _props={{className:'text-danger'}} quorum={numbro(this.props.chain.gov.tallyParams.quorum).format("0.00%")} _purify={false}>proposals.invalidMessage</T>:<T moreVotes={numbro(totalVotingPower*100*this.props.chain.gov.tallyParams.quorum-this.state.totalVotes).format("0,0")} _purify={false}>proposals.moreVoteMessage</T>}
+                                                {this.state.proposalValid?<T _props={{className:'text-success'}} tentative={(!this.state.voteEnded)?'(tentatively) ':''} _purify={false}>proposals.validMessage</T>:(this.state.voteEnded)?<T _props={{className:'text-danger'}} quorum={numbro(this.props.chain.gov.tallyParams.quorum).format("0.00%")} _purify={false}>proposals.invalidMessage</T>:<T moreVotes={numbro(totalVotingPower*this.props.chain.gov.tallyParams.quorum-this.state.totalVotes*100).format("0,0")} _purify={false}>proposals.moreVoteMessage</T>}
                                             </em>
                                         </Card>
                                     </Col>
