@@ -129,7 +129,7 @@ Meteor.methods({
                     try{
                         response = HTTP.get(url);
                         let tallyParams = JSON.parse(response.content).result;
-                        if (quorum){
+                        if (tallyParams){
                             chain.gov.tallyParams.quorum = parseFloat(tallyParams.quorum)
                             chain.gov.tallyParams.threshold = parseFloat(tallyParams.threshold)
                             chain.gov.tallyParams.veto = parseFloat(tallyParams.veto)

@@ -17,7 +17,7 @@ export default class ChainStates extends Component{
             marketCap: "-",
             height: "-",
             bonded: "-",
-            inflation: 0,
+            inflation: "-",
             communityPool: [],
         }
         const powerReduction = Meteor.settings.public.powerReduction || Coin.StakingCoin.fraction;
@@ -50,7 +50,7 @@ export default class ChainStates extends Component{
 
             if (this.props.chainStates.bondedTokens){
                 this.setState({
-                    bonded: numbro((Math.round(this.props.chainStates.bondedTokens / powerReduction))).format("0,0.00a")
+                    bonded: numbro((Math.round(this.props.chainStates.bondedTokens / powerReduction))).format("0,0.000a")
                 })
             }
 
@@ -80,7 +80,7 @@ export default class ChainStates extends Component{
 
             if (this.props.chainStates.bondedTokens){
                 this.setState({
-                    bonded: numbro((Math.round(this.props.chainStates.bondedTokens / powerReduction))).format("0,0.00a")
+                    bonded: numbro((Math.round(this.props.chainStates.bondedTokens / powerReduction))).format("0,0.000a")
                 })
             }
         }
@@ -112,10 +112,10 @@ export default class ChainStates extends Component{
         return <Card className="d-lg-inline-block">
             <CardHeader>
                 <Row className="header-stats text-nowrap">
-                    <Col xs={4} md="auto"><small><span><T>chainStates.price</T>:</span> <strong>${this.state.price}</strong></small></Col>
-                    <Col xs={8} md="auto"><small><span><T>chainStates.height</T>:</span> <strong>#{this.state.height}</strong></small></Col>
-                    <Col xs={4} md="auto"><small><span><T>chainStates.bondedTokens</T>:</span> <strong>{this.state.bonded}</strong></small></Col>
-                    <Col xs={8} md="auto"><small><span><T>chainStates.inflation</T>:</span> <strong>{this.state.inflation}</strong></small></Col>
+                    <Col xs={6} md="auto"><small><span><T>chainStates.price</T>:</span> <strong>${this.state.price}</strong></small></Col>
+                    <Col xs={6} md="auto"><small><span><T>chainStates.height</T>:</span> <strong>#{this.state.height}</strong></small></Col>
+                    <Col xs={6} md="auto"><small><span><T>chainStates.bondedTokens</T>:</span> <strong>{this.state.bonded}</strong></small></Col>
+                    <Col xs={6} md="auto"><small><span><T>chainStates.inflation</T>:</span> <strong>{this.state.inflation}</strong></small></Col>
                     {/*<Col xs={8} md="auto"><small><span><T>chainStates.communityPool</T>:</span> <strong>{(this.renderValues(this.state.communityPool))}</strong></small></Col>*/}
                 </Row>
             </CardHeader>
