@@ -222,6 +222,7 @@ export default class Proposal extends Component{
     renderTallyResultDetail(openState, option) {
         let votes = this.props.proposal.votes?this.props.proposal.votes.filter((vote) => vote.option == option):[];
         let orderDir = this.state.orderDir;
+        const powerReduction = Meteor.settings.public.powerReduction || Coin.StakingCoin.fraction;
         votes = votes.sort((vote1, vote2) => (vote1['votingPower'] - vote2['votingPower']) * orderDir);
 
         return <Result className="tally-result-detail" pose={this.state.open === openState ? 'open' : 'closed'}>
