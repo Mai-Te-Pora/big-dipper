@@ -125,12 +125,14 @@ Meteor.methods({
                         console.log(e)
                     }
 
-                    url = LCD + '/gov/paraneters/tallying';
+                    url = LCD + '/gov/parameters/tallying';
                     try{
                         response = HTTP.get(url);
-                        let quorum = JSON.parse(response.content).result;
+                        let tallyParams = JSON.parse(response.content).result;
                         if (quorum){
-                            tallyParams.quorum = parseFloat(quorum)
+                            chain.gov.tallyParams.quorum = parseFloat(tallyParams.quorum)
+                            chain.gov.tallyParams.threshold = parseFloat(tallyParams.threshold)
+                            chain.gov.tallyParams.veto = parseFloat(tallyParams.veto)
                         }
                     }
                     catch(e){

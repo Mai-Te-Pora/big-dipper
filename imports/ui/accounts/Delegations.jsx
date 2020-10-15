@@ -36,8 +36,8 @@ export default class AccountDelegations extends Component{
                             rewardDenom =(reward)?reward.find(({denom}) => denom === denomType): null;
                         
                         return <Row key={i} className="delegation-info">
-                            <Col xs={7} md={5} className="text-nowrap overflow-auto"><AccountTooltip address={d.validator_address} /></Col>
-                            <Col xs={2} md={3}>{new Coin(d.balance.amount, d.balance.denom).toString(8)}</Col>
+                            <Col xs={6} md={4} className="text-nowrap overflow-auto"><AccountTooltip address={d.validator_address} /></Col>
+                            <Col xs={3} md={4}>{new Coin(d.balance.amount, d.balance.denom).toString(8)}</Col>
                             <Col xs={3} md={4}>{rewardDenom?new Coin(rewardDenom.amount, rewardDenom.denom).toString(8):'No rewards '} </Col>
                         </Row>
                     })}</SentryBoundary>
