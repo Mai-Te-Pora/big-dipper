@@ -48,7 +48,9 @@ consensus:
     step: '阶数'
 chainStates:
     price: '价格'
+    height: 'Height'
     marketCap: '市值'
+    bondedTokens: 'Bonded'
     inflation: '通胀率'
     communityPool: '社区储备'
 chainStatus:

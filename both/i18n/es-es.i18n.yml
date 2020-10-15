@@ -48,7 +48,9 @@ consensus:
     step: 'Paso'
 chainStates:
     price: 'Precio'
+    height: 'Height'
     marketCap: 'Capitalización de mercado'
+    bondedTokens: 'Bonded'
     inflation: 'Inflación'
     communityPool: 'Community Pool'
 chainStatus:
