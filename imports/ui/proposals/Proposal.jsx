@@ -279,7 +279,7 @@ export default class Proposal extends Component{
                 if (powerReduction) {console.log('powerReduction: ' + powerReduction)}
                 if (this.props.chain.gov.tallyParams) {console.log('this.props.chain.gov.tallyParams.quorum: : ' + this.props.chain.gov.tallyParams.quorum)}
                 if (totalVotingPower) {console.log('totalVotingPower: ' + totalVotingPower)}
-                if (totalVotes) {console.log('totalVotes: ' + totalVotes)}
+                if (this.state.totalVotes) {console.log('this.state.totalVotes: ' + this.state.totalVotes)}
                 return <div>
                     <Helmet>
                         <title>{this.props.proposal.content.value.title} | Tradehub Explorer</title>
