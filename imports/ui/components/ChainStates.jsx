@@ -50,7 +50,7 @@ export default class ChainStates extends Component{
 
             if (this.props.chainStates.bondedTokens){
                 this.setState({
-                    bonded: numbro((Math.round(this.props.chainStates.bondedTokens / powerReduction))).format("0,0")
+                    bonded: numbro((Math.round(this.props.chainStates.bondedTokens / powerReduction))).format("0,0.00a")
                 })
             }
 
@@ -80,7 +80,7 @@ export default class ChainStates extends Component{
 
             if (this.props.chainStates.bondedTokens){
                 this.setState({
-                    bonded: numbro((Math.round(this.props.chainStates.bondedTokens / powerReduction))).format("0,0")
+                    bonded: numbro((Math.round(this.props.chainStates.bondedTokens / powerReduction))).format("0,0.00a")
                 })
             }
         }
