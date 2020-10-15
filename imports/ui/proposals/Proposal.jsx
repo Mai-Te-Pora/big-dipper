@@ -70,7 +70,7 @@ export default class Proposal extends Component{
             let totalVotingPower = this.props.chain.activeVotingPower * powerReduction;
             if (this.props.chain.activeVotingPower) {console.log('this.props.chain.activeVotingPower: ' + this.props.chain.activeVotingPower)}
             if (powerReduction) {console.log('powerReduction: ' + powerReduction)}
-            if (this.props.chain.gov.tallyParams.quorum) {console.log('this.props.chain.gov.tallyParams.quorum: : ' + this.props.chain.gov.tallyParams.quorum)}
+            if (this.props.chain.gov.tallyParams) {console.log('this.props.chain.gov.tallyParams: : ' + this.props.chain.gov.tallyParams)}
 
             if (this.props.proposal.voting_start_time != '0001-01-01T00:00:00Z'){
                 if (now.diff(moment(this.props.proposal.voting_start_time)) > 0){
