@@ -125,21 +125,6 @@ Meteor.methods({
                         console.log(e)
                     }
 
-                    url = LCD + '/gov/parameters/tallying';
-                    try{
-                        response = HTTP.get(url);
-                        let tallyParams = JSON.parse(response.content).result;
-                        if (tallyParams){
-                            chain.gov.tallyParams.quorum = parseFloat(tallyParams.quorum)
-                            chain.gov.tallyParams.threshold = parseFloat(tallyParams.threshold)
-                            chain.gov.tallyParams.veto = parseFloat(tallyParams.veto)
-                        }
-                    }
-                    catch(e){
-                        console.log(url);
-                        console.log(e);
-                    }
-
                     /*url = LCD + '/minting/inflation';
                     try{
                         response = HTTP.get(url);
