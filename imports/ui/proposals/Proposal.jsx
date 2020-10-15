@@ -276,10 +276,6 @@ export default class Proposal extends Component{
                 const powerReduction = Meteor.settings.public.powerReduction || Coin.StakingCoin.fraction;
                 let totalVotingPower = this.props.chain.activeVotingPower * powerReduction;
 
-                if (totalVotingPower) {console.log('totalVotingPower: ' + totalVotingPower)}
-                if (this.state.totalVotes) {console.log('this.state.totalVotes: ' + this.state.totalVotes)}
-                if (powerReduction) {console.log('powerReduction: ' + powerReduction)}
-
                 return <div>
                     <Helmet>
                         <title>{this.props.proposal.content.value.title} | Tradehub Explorer</title>

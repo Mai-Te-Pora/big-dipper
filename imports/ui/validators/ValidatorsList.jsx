@@ -44,6 +44,10 @@ export default class Validators extends Component{
                     state[PriorityEnum[sortField].dirKey] = Number(queryParams.dir) > 0?1:-1;
                 }
             }
+            console.log('queryParams ' + queryParams)
+            console.log('sortField ' + sortField)
+            console.log('state.priority ' + state.priority)
+            console.log('Number(queryParams.dir) ' + Number(queryParams.dir))
         }
         this.state = state;
     }
@@ -65,6 +69,10 @@ export default class Validators extends Component{
                 dir: newDir
             })
         });
+
+        console.log('dirKey ' + dirKey)
+        console.log('newDir ' + newDir)
+        console.log('PriorityEnum[field].code ' + PriorityEnum[field].code)
     }
 
     render() {
