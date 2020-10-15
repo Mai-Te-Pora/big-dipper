@@ -50,7 +50,7 @@ export default class ChainStates extends Component{
 
             if (this.props.chainStates.bondedTokens){
                 this.setState({
-                    bonded: numbro((Math.round(this.props.coinStats.bondedTokens))).format("$0,0")
+                    bonded: numbro((Math.round(this.props.chainStates.bondedTokens))).format("$0,0")
                 })
             }
 
@@ -73,13 +73,13 @@ export default class ChainStates extends Component{
 
             if (this.props.chainStates.height){
                 this.setState({
-                    height: numbro((this.props.chainStates.height)).format("$0,0")
+                    height: numbro((this.props.chainStates.height)).format("0,0")
                 })
             }
 
             if (this.props.chainStates.bondedTokens){
                 this.setState({
-                    bonded: numbro((Math.round(this.props.chainStates.bondedTokens))).format("$0,0")
+                    bonded: numbro((Math.round(this.props.chainStates.bondedTokens))).format("0,0")
                 })
             }
         }
@@ -110,10 +110,10 @@ export default class ChainStates extends Component{
 
         return <Card className="d-lg-inline-block">
             <CardHeader>
-                <Row className="text-nowrap">
+                <Row className="header-stats text-nowrap">
                     <Col xs={4} md="auto"><small><span><T>chainStates.price</T>:</span> <strong>${this.state.price}</strong></small></Col>
                     <Col xs={8} md="auto"><small><span><T>chainStates.height</T>:</span> <strong>#{this.state.height}</strong></small></Col>
-                    <Col xs={4} md="auto"><small><span><T>chainStates.bondedTokens</T>:</span> <strong>{this.state.bondedTokens}</strong></small></Col>
+                    <Col xs={4} md="auto"><small><span><T>chainStates.bondedTokens</T>:</span> <strong>{this.state.bonded}</strong></small></Col>
                     <Col xs={8} md="auto"><small><span><T>chainStates.inflation</T>:</span> <strong>{this.state.inflation}</strong></small></Col>
                     {/*<Col xs={8} md="auto"><small><span><T>chainStates.communityPool</T>:</span> <strong>{(this.renderValues(this.state.communityPool))}</strong></small></Col>*/}
                 </Row>
