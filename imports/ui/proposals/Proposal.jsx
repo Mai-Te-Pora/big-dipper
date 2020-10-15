@@ -399,10 +399,10 @@ export default class Proposal extends Component{
                                     <Col xs={12}><Card>
                                         <CardHeader>
                                             <Nav tabs className='card-header-tabs'>
-                                                {['Bar', 'All', 'Yes', 'Abstain', 'No', 'NoWithVeto'].map((option)=>
+                                                {['Bar', 'All', 'Yes', 'Abstain', 'No', 'No with Veto'].map((option)=>
                                                     <NavItem key={option}><NavLink className='no-select' active={this.state.breakDownSelection==option}
                                                         onClick={() => this.setState({breakDownSelection: option})}>
-                                                        {option=='Bar'?'All(Bar)':option}
+                                                        {option=='Bar'?'All (Bar)':option}
                                                     </NavLink></NavItem>
                                                 )}
                                             </Nav>
@@ -427,8 +427,8 @@ export default class Proposal extends Component{
                                     <Col xs={12}>
                                         <Card body className="tally-info">
                                             <em>
-                                                <T _purify={false} percent={numbro(this.state.totalVotes/totalVotingPower).format("0.00%")}>proposals.percentageVoted</T><br/>
-                                                {this.state.proposalValid?<T _props={{className:'text-success'}} tentative={(!this.state.voteEnded)?'(tentatively) ':''} _purify={false}>proposals.validMessage</T>:(this.state.voteEnded)?<T _props={{className:'text-danger'}} quorum={numbro(this.props.chain.gov.tallyParams.quorum).format("0.00%")} _purify={false}>proposals.invalidMessage</T>:<T moreVotes={numbro(totalVotingPower*this.props.chain.gov.tallyParams.quorum-this.state.totalVotes).format("0,0")} _purify={false}>proposals.moreVoteMessage</T>}
+                                                <T _purify={false} percent={numbro(this.state.totalVotes/totalVotingPower*100).format("0.00%")}>proposals.percentageVoted</T><br/>
+                                                {this.state.proposalValid?<T _props={{className:'text-success'}} tentative={(!this.state.voteEnded)?'(tentatively) ':''} _purify={false}>proposals.validMessage</T>:(this.state.voteEnded)?<T _props={{className:'text-danger'}} quorum={numbro(this.props.chain.gov.tallyParams.quorum).format("0.00%")} _purify={false}>proposals.invalidMessage</T>:<T moreVotes={numbro(totalVotingPower*100*this.props.chain.gov.tallyParams.quorum-this.state.totalVotes).format("0,0")} _purify={false}>proposals.moreVoteMessage</T>}
                                             </em>
                                         </Card>
                                     </Col>
