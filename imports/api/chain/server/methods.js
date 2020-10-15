@@ -125,6 +125,19 @@ Meteor.methods({
                         console.log(e)
                     }
 
+                    url = LCD + '/gov/paraneters/tallying';
+                    try{
+                        response = HTTP.get(url);
+                        let quorum = JSON.parse(response.content).result;
+                        if (quorum){
+                            tallyParams.quorum = parseFloat(quorum)
+                        }
+                    }
+                    catch(e){
+                        console.log(url);
+                        console.log(e);
+                    }
+
                     /*url = LCD + '/minting/inflation';
                     try{
                         response = HTTP.get(url);
