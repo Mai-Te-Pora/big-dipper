@@ -89,8 +89,10 @@ export default class Proposal extends Component{
                             abstainPercent: (totalVotes>0)?parseInt(this.props.proposal.tally.abstain)/totalVotes*100:0,
                             noPercent: (totalVotes>0)?parseInt(this.props.proposal.tally.no)/totalVotes*100:0,
                             noWithVetoPercent: (totalVotes>0)?parseInt(this.props.proposal.tally.no_with_veto)/totalVotes*100:0,
-                            proposalValid: (this.state.totalVotes/totalVotingPower > parseFloat(0.334))?true:false
+                            proposalValid: (this.state.totalVotes/totalVotingPower/100 > parseFloat(0.334))?true:false
                         })
+                        console.log('this.state.totalVotes ' + this.state.totalVotes)
+                        console.log('totalVotingPower: ' + totalVotingPower)
                     }
                     else{
                         let totalVotes = 0;
