@@ -20,7 +20,7 @@ export default class ChainStates extends Component{
             inflation: 0,
             communityPool: [],
         }
-
+        const powerReduction = Meteor.settings.public.powerReduction || Coin.StakingCoin.fraction;
 
         if (Meteor.isServer){
                          
@@ -44,13 +44,13 @@ export default class ChainStates extends Component{
 
             if (this.props.chainStates.height){
                 this.setState({
-                    height: numbro((this.props.chainStates.height)).format("$0,0")
+                    height: numbro((this.props.chainStates.height)).format("0,0")
                 })
             }
 
             if (this.props.chainStates.bondedTokens){
                 this.setState({
-                    bonded: numbro((Math.round(this.props.chainStates.bondedTokens))).format("$0,0")
+                    bonded: numbro((Math.round(this.props.chainStates.bondedTokens / powerReduction))).format("0,0")
                 })
             }
 
@@ -60,6 +60,7 @@ export default class ChainStates extends Component{
 
     componentDidUpdate(prevProps){
         let communityPools = []
+        const powerReduction = Meteor.settings.public.powerReduction || Coin.StakingCoin.fraction;
         if (this.props.chainStates != prevProps.chainStates){
             if (this.props.chainStates.communityPool){
                 this.props.chainStates.communityPool.forEach((pool, i) => {
@@ -79,7 +80,7 @@ export default class ChainStates extends Component{
 
             if (this.props.chainStates.bondedTokens){
                 this.setState({
-                    bonded: numbro((Math.round(this.props.chainStates.bondedTokens))).format("0,0")
+                    bonded: numbro((Math.round(this.props.chainStates.bondedTokens / powerReduction))).format("0,0")
                 })
             }
         }
