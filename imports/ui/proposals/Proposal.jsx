@@ -78,7 +78,6 @@ export default class Proposal extends Component{
                         for (let i in this.props.proposal.tally){
                             totalVotes += parseInt(this.props.proposal.tally[i]);
                         }
-                        console.log('totalVotes: ' + totalVotes)
 
                         this.setState({
                             tally: this.props.proposal.tally,
@@ -278,7 +277,9 @@ export default class Proposal extends Component{
                 let totalVotingPower = this.props.chain.activeVotingPower * powerReduction;
                 if (this.props.chain.activeVotingPower) {console.log('this.props.chain.activeVotingPower: ' + this.props.chain.activeVotingPower)}
                 if (powerReduction) {console.log('powerReduction: ' + powerReduction)}
-                if (this.props.chain.gov.tallyParams) {console.log('this.props.chain.gov.tallyParams: : ' + this.props.chain.gov.tallyParams)}
+                if (this.props.chain.gov.tallyParams) {console.log('this.props.chain.gov.tallyParams.quorum: : ' + this.props.chain.gov.tallyParams.quorum)}
+                if (totalVotingPower) {console.log('totalVotingPower: ' + totalVotingPower)}
+                if (totalVotes) {console.log('totalVotes: ' + totalVotes)}
                 return <div>
                     <Helmet>
                         <title>{this.props.proposal.content.value.title} | Tradehub Explorer</title>
