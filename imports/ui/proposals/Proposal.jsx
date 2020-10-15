@@ -68,8 +68,9 @@ export default class Proposal extends Component{
             let now = moment();
             const powerReduction = Meteor.settings.public.powerReduction || Coin.StakingCoin.fraction;
             let totalVotingPower = this.props.chain.activeVotingPower * powerReduction;
-            console.log('totalVotingPower: ' + totalVotingPower)
-            console.log('this.props.chain.gov.tallyParams.quorum: ' + this.props.chain.gov.tallyParams.quorum)
+            if (this.props.chain.activeVotingPower) {console.log('this.props.chain.activeVotingPower: ' + this.props.chain.activeVotingPower)}
+            if (powerReduction) {console.log('powerReduction: ' + powerReduction)}
+            if (this.props.chain.gov.tallyParams.quorum) {console.log('this.props.chain.gov.tallyParams.quorum: : ' + this.props.chain.gov.tallyParams.quorum)}
 
             if (this.props.proposal.voting_start_time != '0001-01-01T00:00:00Z'){
                 if (now.diff(moment(this.props.proposal.voting_start_time)) > 0){
@@ -280,7 +281,7 @@ export default class Proposal extends Component{
                 let totalVotingPower = this.props.chain.activeVotingPower * powerReduction;
                 return <div>
                     <Helmet>
-                        <title>{this.props.proposal.content.value.title} | The Big Dipper</title>
+                        <title>{this.props.proposal.content.value.title} | Tradehub Explorer</title>
                         <meta name="description" content={this.props.proposal.content.value.description} />
                     </Helmet>
 
