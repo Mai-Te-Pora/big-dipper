@@ -69,14 +69,14 @@ export default class TransactionTabs extends Component{
                             <T>transactions.distribution</T> ({numbro(this.state.distributionTxs.length).format("0,0")})
                         </NavLink>
                     </NavItem>
-                    {/*<NavItem>
+                    <NavItem>
                         <NavLink
                             className={classnames({ active: this.state.activeTab === 'tx-gov' })}
                             onClick={() => { this.toggle('tx-gov'); }}
                         >
                             <T>transactions.governance</T> ({numbro(this.state.governanceTxs.length).format("0,0")})
                         </NavLink>
-                    </NavItem>*/}
+                    </NavItem>
                     <NavItem>
                         <NavLink
                             className={classnames({ active: this.state.activeTab === 'tx-slashing' })}

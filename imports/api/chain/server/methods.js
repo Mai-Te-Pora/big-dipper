@@ -140,7 +140,7 @@ Meteor.methods({
 
                     currentDate = new Date().getTime()
                     startDate = 1597924800000
-                    weeksSince = Math.round((currentDate - startDate) / (7 * 24 * 60 * 60 * 1000));
+                    weeksSince = Math.round((currentDate - startDate) / (7 * 24 * 60 * 60 * 1000)) + 1;
 
                     console.log('weeksSince Start: ' + weeksSince)
 
