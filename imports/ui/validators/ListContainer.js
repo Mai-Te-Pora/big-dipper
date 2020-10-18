@@ -34,6 +34,7 @@ export default ValidatorListContainer = withTracker((props) => {
     let options = {};
 
     // console.log(validatorsCond);
+
     switch(props.priority){
     case 0:
         options = {
