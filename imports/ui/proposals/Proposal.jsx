@@ -224,7 +224,9 @@ export default class Proposal extends Component{
     }
 
     renderTallyResultDetail(openState, option) {
+        console.log('this.props.proposal ' + this.props.proposal)
         let votes = this.props.proposal.votes?this.props.proposal.votes.filter((vote) => vote.option == option):[];
+        console.log('votes ' + )
         let orderDir = this.state.orderDir;
         const powerReduction = Meteor.settings.public.powerReduction || Coin.StakingCoin.fraction;
         votes = votes.sort((vote1, vote2) => (vote1['votingPower'] - vote2['votingPower']) * orderDir);
@@ -273,7 +275,7 @@ export default class Proposal extends Component{
         }
         else{
             if (this.props.proposalExist && this.state.proposal != ''){
-                // console.log(this.state.proposal);
+                console.log(this.state.proposal);
                 const proposalId = Number(this.props.proposal.proposalId), maxProposalId = Number(this.props.proposalCount);
                 const powerReduction = Meteor.settings.public.powerReduction || Coin.StakingCoin.fraction;
                 let totalVotingPower = this.props.chain.activeVotingPower * powerReduction;
