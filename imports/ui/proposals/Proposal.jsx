@@ -226,7 +226,7 @@ export default class Proposal extends Component{
     renderTallyResultDetail(openState, option) {
         console.log('this.props.proposal ' + this.props.proposal)
         let votes = this.props.proposal.votes?this.props.proposal.votes.filter((vote) => vote.option == option):[];
-        console.log('votes ' + )
+        console.log('votes ' + votes)
         let orderDir = this.state.orderDir;
         const powerReduction = Meteor.settings.public.powerReduction || Coin.StakingCoin.fraction;
         votes = votes.sort((vote1, vote2) => (vote1['votingPower'] - vote2['votingPower']) * orderDir);
