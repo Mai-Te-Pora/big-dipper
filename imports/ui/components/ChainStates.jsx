@@ -100,10 +100,10 @@ export default class ChainStates extends Component{
     renderValues(propsValue){
             let poolValues = [];
             propsValue.map((pool,i) => {
-                poolValues[i] = new Coin(pool.amount, pool.denom).toString(0)
+                poolValues[i] = new Coin(Math.round(pool.amount), pool.denom).toString(0)
                     })
 
-            return poolValues.join(', ').toString(0)
+            return poolValues.join(', ')
 
     }
     render(){
