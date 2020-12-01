@@ -103,7 +103,7 @@ export default class ChainStates extends Component{
                 poolValues[i] = new Coin(pool.amount, pool.denom).toString(0)
                     })
 
-            return poolValues.join(', ')
+            return poolValues.join(', ').toString(0)
 
     }
     render(){
