@@ -15,6 +15,10 @@ autoformat = (value) => {
 	return numbro(value).format(formatter)
 }
 
+autoformatPool = (value) => {
+	return numbro(Math.round(value)).format('0,0')
+}
+
 const coinList = Meteor.settings.public.coins;
 for (let i in coinList) {
 	const coin = coinList[i];
@@ -62,6 +66,16 @@ export default class Coin {
 			return `${numbro(this.amount).format('0,0.0000' )} ${this._coin.denom}`;
 		} else {
 			return `${precision?numbro(this.stakingAmount).format('0,0.' + '0'.repeat(precision)):autoformat(this.stakingAmount)} ${this._coin.displayName}`
+		}
+	}
+
+	toStringPool (precision) {
+		// default to display in mint denom if it has more than 4 decimal places
+		let minStake = Coin.StakingCoin.fraction/(precision?Math.pow(10, precision):10000)
+		if (this.amount < minStake) {
+			return `${numbro(this.amount).format('0,0.0000' )} ${this._coin.denom}`;
+		} else {
+			return `${precision?numbro(this.stakingAmount).format('0,0.' + '0'.repeat(precision)):autoformatPool(this.stakingAmount)} ${this._coin.displayName}`
 		}
 	}
 

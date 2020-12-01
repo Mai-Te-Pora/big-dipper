@@ -100,7 +100,8 @@ export default class ChainStates extends Component{
     renderValues(propsValue){
             let poolValues = [];
             propsValue.map((pool,i) => {
-                poolValues[i] = new Coin(Math.round(pool.amount), pool.denom).toString(0)
+                poolValues[i] = new Coin(Math.round(pool.amount), pool.denom).toStringPool()
+                // poolValues[i] = new Coin(Math.round(pool.amount), pool.denom).toString()
                     })
 
             return poolValues.join(', ')
@@ -113,7 +114,7 @@ export default class ChainStates extends Component{
             <CardHeader>
                 <Row className="header-stats text-nowrap">
                     <Col xs={6} md="auto"><small><span><T>chainStates.price</T>:</span> <strong>${this.state.price}</strong></small></Col>
-                    <Col xs={8} md="auto"><small><span><T>chainStates.communityPool</T>:</span> <strong>{(this.renderValues(this.state.communityPool))}</strong></small></Col>
+                    <Col xs={6} md="auto"><small><span><T>chainStates.communityPool</T>:</span> <strong>{(this.renderValues(this.state.communityPool))}</strong></small></Col>
                     {/*<Col xs={6} md="auto"><small><span><T>chainStates.height</T>:</span> <strong>#{this.state.height}</strong></small></Col>*/}
                     <Col xs={6} md="auto"><small><span><T>chainStates.bondedTokens</T>:</span> <strong>{this.state.bonded}</strong></small></Col>
                     <Col xs={6} md="auto"><small><span><T>chainStates.inflation</T>:</span> <strong>{this.state.inflation}</strong></small></Col>

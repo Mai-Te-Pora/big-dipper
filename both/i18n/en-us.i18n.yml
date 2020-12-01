@@ -53,7 +53,7 @@ chainStates:
     marketCap: 'Market Cap'
     bondedTokens: 'Bonded'
     inflation: 'Inflation'
-    communityPool: 'Community Pool'
+    communityPool: 'SDF'
 chainStatus:
     startMessage: 'The chain is going to start in'
     stopWarning: 'The chain appears to be stopped for <em>{$time}</em>! Feed me with new blocks 😭!'
