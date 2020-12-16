@@ -170,6 +170,9 @@ export default class Header extends Component {
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="ml-auto text-nowrap" navbar>
                         <NavItem>
+                            <a class="nav-link trade-link" href="https://app.dem.exchange/trade" target="_blank">Trade</a>
+                        </NavItem>
+                        <NavItem>
                             <NavLink tag={Link} to="/validators"><T>navbar.validators</T></NavLink>
                         </NavItem>
                         <NavItem>

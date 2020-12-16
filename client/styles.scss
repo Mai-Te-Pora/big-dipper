@@ -5,6 +5,11 @@ $primary: $forbole-red !default;
 @import "bootstrap";
 @import "materia/bootswatch";
 
+.trade-link:hover {
+  color: #4276E6 !important;
+  font-weight: 700;
+}
+
 body {
     font-size: inherit !important;
   }
