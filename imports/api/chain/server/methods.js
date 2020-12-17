@@ -113,6 +113,7 @@ Meteor.methods({
                         if (pool && pool.length > 0){
                             chainStates.communityPool = [];
                             pool.forEach((amount, i) => {
+                                if (amount.denom.toLowerCase() === 'swth')
                                 chainStates.communityPool.push({
                                     denom: amount.denom,
                                     amount: parseFloat(amount.amount)
