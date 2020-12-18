@@ -15,7 +15,7 @@ export default class Order extends Component{
     }
 
     render(){
-        if (type === 'market') {
+        if (this.state.type === 'market') {
             return <span className="order overflow-auto d-inline">
             {this.state.type} {this.state.side} on {this.state.market}, quantity: {this.state.quantity} 
         </span>
