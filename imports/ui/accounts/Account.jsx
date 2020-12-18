@@ -119,6 +119,8 @@ export default class AccountDetails extends Component{
 
             }
 
+                console.log('result')
+                console.log(result)
 
                 if(result.total_rewards && result.total_rewards.length > 0)
                 {

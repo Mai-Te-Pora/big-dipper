@@ -39,7 +39,7 @@ export default class Activites extends Component {
     }
 
     render(){
-        // console.log(this.props);
+        console.log(this.props);
         const msg = this.props.msg;
         const events = [];
         for (let i in this.props.events){
@@ -79,8 +79,12 @@ export default class Activites extends Component {
 
             // distribution
         case "cosmos-sdk/MsgWithdrawValidatorCommission":
+            console.log('events')
+            console.log(events)
             return <p><Account address={msg.value.validator_address} /> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<T _purify={false} amount={new Coin(parseInt(events['withdraw_commission'][0].value), events['withdraw_commission'][0].value?events['withdraw_commission'][0].value.replace(/[0-9]/g, ''):events['withdraw_commission'][0].value).toString(8)}>activities.ofAmount</T>:''}common.fullStop</T></p>
         case "cosmos-sdk/MsgWithdrawDelegationReward":
+            console.log('events')
+            console.log(events)
             return <p><Account address={msg.value.delegator_address}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /> {(!this.props.invalid)?<T _purify={false} amount={new Coin(parseInt(events['withdraw_rewards'][0].value), events['withdraw_rewards'][0].value?events['withdraw_rewards'][0].value.replace(/[0-9]/g, ''):events['withdraw_rewards'][0].value).toString(8)}>activities.ofAmount</T>:''} <T>activities.from</T> <Account address={msg.value.validator_address} /><T>common.fullStop</T></p>
         case "cosmos-sdk/MsgModifyWithdrawAddress":
             return <p><Account address={msg.value.delegator_address}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /></p>
