@@ -2,6 +2,7 @@ import React, {Component } from 'react';
 import { MsgType } from './MsgType.jsx';
 import { Link } from 'react-router-dom';
 import Account from '../components/Account.jsx';
+import Order from '../components/Order.jsx';
 import i18n from 'meteor/universe:i18n';
 import Coin from '/both/utils/coins.js'
 import JSONPretty from 'react-json-pretty';
@@ -136,6 +137,12 @@ export default class Activites extends Component {
             return <MsgType type={msg.type} />
         case "cosmos-sdk/IBCReceiveMsg":
             return <MsgType type={msg.type} />
+
+            // tradehub
+        case "order/MsgCreateOrder":
+            return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Order address={msg.value.originator} market={msg.value.market} price={msg.value.price} quantity={msg.value.quantity} side={msg.value.side} type={msg.value.type}/>:''}common.fullStop</T></p>     
+        /*case "liquiditypool/ClaimPoolRewards":
+            return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T>common.fullStop</T></p>*/
 
         default:
             return <div><JSONPretty id="json-pretty" data={msg.value}></JSONPretty></div>

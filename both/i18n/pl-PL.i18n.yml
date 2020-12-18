@@ -240,3 +240,4 @@ messageTypes:
     unjail: 'Unjail'
     IBCTransfer: 'Wyślij IBC'
     IBCReceive: 'Odbierz IBC'
+    orderCreated: Create Order

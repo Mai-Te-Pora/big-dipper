@@ -50,6 +50,10 @@ export const MsgType = (props) => {
     case "cosmos-sdk/IBCReceiveMsg":
         return <Badge color="dark"><T>messageTypes.IBCReceive</T></Badge>;
 
+        // tradehub
+    case "order/MsgCreateOrder":
+        return <Badge color="#4276e6"><T>messageTypes.orderCreated</T></Badge>;
+
     default:
         return <Badge color="primary">{props.type}</Badge>;
     }
