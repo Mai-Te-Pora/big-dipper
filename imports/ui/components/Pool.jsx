@@ -25,7 +25,7 @@ export default class Order extends Component{
                 </span>
             case 2: // remove
                 return <span className="order overflow-auto d-inline">
-                    of {this.state.shares} on pool {this.state.pool} 
+                    of {this.state.shares} shares on pool {this.state.pool} 
                 </span>
             case 3: // add
                 return <span className="order overflow-auto d-inline">
