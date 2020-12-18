@@ -29,11 +29,11 @@ export default class Order extends Component{
                 </span>
             case 3: // add
                 return <span className="order overflow-auto d-inline">
-                    of {this.state.shares} (Amount A: {this.state.amountA} - Amount B: {this.state.amountB}) on pool {this.state.pool} 
+                    of {this.state.shares} shares (Amount A: {this.state.amountA} - Amount B: {this.state.amountB}) on pool {this.state.pool} 
                 </span>
             case 4: // stake
                 return <span className="order overflow-auto d-inline">
-                    of {this.state.amount} for {this.state.duration} days, on {this.state.denom}
+                    of {this.state.amount} shares for {this.state.duration} days, on {this.state.denom}
                 </span>
             default:
                 return <span className="order overflow-auto d-inline">

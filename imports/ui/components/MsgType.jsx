@@ -51,6 +51,8 @@ export const MsgType = (props) => {
         return <Badge color="dark"><T>messageTypes.IBCReceive</T></Badge>;
 
         // tradehub
+    case "coin/MsgWithdraw":
+        return <Badge color="order"><T>messageTypes.messageWithdrawTx</T></Badge>;
     case "profile/MsgUpdateProfile":
         return <Badge color="order"><T>messageTypes.profileUpdated</T></Badge>;
     case "order/MsgCreateOrder":
