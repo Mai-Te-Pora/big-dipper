@@ -11,9 +11,9 @@ export default class Order extends Component{
             type: this.props.type,
             amountA: this.props.amountA,
             amountB: this.props.amountB,
-            amount: amount,
-            duration: duration,
-            denom: denom,
+            amount: this.props.amount,
+            duration: this.props.duration,
+            denom: this.props.denom,
         }
     }
 
