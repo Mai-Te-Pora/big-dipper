@@ -6,11 +6,14 @@ export default class Order extends Component{
 
         this.state = {
             originator: this.props.originator,
-            pool: this.props.pool_id,
+            pool: this.props.pool,
             shares: this.props.shares,
             type: this.props.type,
             amountA: this.props.amountA,
-            amountB: this.props.amountB
+            amountB: this.props.amountB,
+            amount: amount,
+            duration: duration,
+            denom: denom,
         }
     }
 
@@ -28,9 +31,16 @@ export default class Order extends Component{
                 return <span className="order overflow-auto d-inline">
                     of {this.state.shares} (Amount A: {this.state.amountA} - Amount B: {this.state.amountB}) on pool {this.state.pool} 
                 </span>
+            case 3:
+                return <span className="order overflow-auto d-inline">
+                    of {this.state.shares} (Amount A: {this.state.amountA} - Amount B: {this.state.amountB}) on pool {this.state.pool} 
+                </span>
+            case 4:
+                return <span className="order overflow-auto d-inline">
+                    of {this.state.amount} for {this.state.duration} on {this.state.denom} 
+                </span>
             default:
                 return <span className="order overflow-auto d-inline">
-                    on pool {this.state.pool} 
                 </span>
         }
     }

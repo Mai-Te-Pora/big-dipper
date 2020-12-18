@@ -236,4 +236,5 @@ messageTypes:
     claimPoolRewards: 'Claim Pool Rewards'
     addLiquidity: 'Add Liquidity'
     removeLiquidity: 'Remove Liquidity'
+    stakePoolToken: 'Stake Pool Token'
 

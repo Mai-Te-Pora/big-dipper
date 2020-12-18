@@ -61,6 +61,8 @@ export const MsgType = (props) => {
         return <Badge color="order"><T>messageTypes.removeLiquidity</T></Badge>;
     case "liquiditypool/AddLiquidity":
         return <Badge color="order"><T>messageTypes.addLiquidity</T></Badge>;
+    case "liquiditypool/StakePoolToken":
+        return <Badge color="order"><T>messageTypes.stakePoolToken</T></Badge>;
 
     default:
         return <Badge color="primary">{props.type}</Badge>;
