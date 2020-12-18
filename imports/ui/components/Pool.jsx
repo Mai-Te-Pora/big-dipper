@@ -12,8 +12,8 @@ export default class Order extends Component{
             amountA: this.props.amountA,
             amountB: this.props.amountB,
             amount: this.props.amount,
-            duration: this.props.duration,
-            denom: this.props.denom,
+            duration: parseFloat(this.props.duration) / 60 / 60 / 24,
+            denom: this.props.denom.toUpperCase(),
         }
     }
 
@@ -37,7 +37,7 @@ export default class Order extends Component{
                 </span>
             case 4:
                 return <span className="order overflow-auto d-inline">
-                    of {this.state.amount} for {this.state.duration} on {this.state.denom} 
+                    of {this.state.amount} for {this.state.duration} days, on {this.state.denom}
                 </span>
             default:
                 return <span className="order overflow-auto d-inline">
