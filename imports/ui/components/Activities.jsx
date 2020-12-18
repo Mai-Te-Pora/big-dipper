@@ -3,6 +3,7 @@ import { MsgType } from './MsgType.jsx';
 import { Link } from 'react-router-dom';
 import Account from '../components/Account.jsx';
 import Order from '../components/Order.jsx';
+import Pool from '../components/Pool.jsx';
 import i18n from 'meteor/universe:i18n';
 import Coin from '/both/utils/coins.js'
 import JSONPretty from 'react-json-pretty';
@@ -148,7 +149,7 @@ export default class Activites extends Component {
         case "liquiditypool/RemoveLiquidity":
             return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Pool address={msg.value.originator} pool={msg.value.pool_id} shares={msg.value.shares} type="2"/>:''}common.fullStop</T></p>     
         case "liquiditypool/AddLiquidity":
-            return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Pool address={msg.value.originator} pool={msg.value.pool_id} shares={msg.value.shares} type="3"/>:''}common.fullStop</T></p>     
+            return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Pool address={msg.value.originator} pool={msg.value.pool_id} shares={msg.value.min_shares} amountA={msg.value.amount_a} amountB={msg.value.amount_b} type="3"/>:''}common.fullStop</T></p>     
     
         default:
             return <div><JSONPretty id="json-pretty" data={msg.value}></JSONPretty></div>
