@@ -143,12 +143,15 @@ export default class Activites extends Component {
         case "ccm/MsgProcessCrossChainTx":
             switch(parseFloat(msg.value.FromChainId)) {
                 case 2:
-                    return <p>Cross-Chain Transaction from NEO</p>     
+                    return <p>Cross-Chain Transaction from NEO</p>
                 case 4:
-                    return <p>Cross-Chain Transaction from Ethereum</p>     
+                    return <p>Cross-Chain Transaction from Ethereum</p> 
                 default:
-                    return <p>Cross-Chain Transaction from Ethereum</p>     
+                    return <p>Cross-Chain Transaction from Ethereum</p> 
             }
+
+        case "profile/MsgUpdateProfile":
+            <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?`with a username of ${msg.value.username}`:''}common.fullStop</T></p>     
         case "order/MsgCreateOrder":
             return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Order address={msg.value.originator} market={msg.value.market} price={msg.value.price} quantity={msg.value.quantity} side={msg.value.side} type={msg.value.type}/>:''}common.fullStop</T></p>     
         case "order/MsgCancelOrder":

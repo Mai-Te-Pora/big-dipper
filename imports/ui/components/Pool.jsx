@@ -13,7 +13,7 @@ export default class Order extends Component{
             amountB: this.props.amountB,
             amount: this.props.amount,
             duration: parseFloat(this.props.duration) / 60 / 60 / 24,
-            denom: (this.props.denom).toUpperCase(),
+            denom: this.props.denom,
         }
     }
 

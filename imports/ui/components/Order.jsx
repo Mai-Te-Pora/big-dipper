@@ -6,7 +6,7 @@ export default class Order extends Component{
 
         this.state = {
             originator: this.props.originator,
-            market: (this.props.market).toUpperCase(),
+            market: this.props.market,
             price: this.props.price,
             quantity: this.props.quantity,
             side: this.props.side,
