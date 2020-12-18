@@ -66,7 +66,7 @@ export default class AccountDetails extends Component{
 
             if (result){
 
-                if (result.available){
+                if (result.available && Coin.StakingCoin.denom){
 
                     this.setState({
                         available: cloneDeep(result.available),

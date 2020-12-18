@@ -570,9 +570,11 @@ body {
     .dropdown-toggle{
       background-color:#063C4F;
       border: solid 0.05rem #063C4F;
-
     }
 
+    .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+      color: white !important;
+    }
    }
 
   }
