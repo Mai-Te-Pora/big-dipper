@@ -150,14 +150,14 @@ export default class Activites extends Component {
                     return <p>Cross-Chain Transaction from Ethereum</p> 
             }
         case "coin/MsgWithdraw":
-            return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?`${msg.value.amount} ${msg.value.denom}`:''}common.fullStop</T></p>     
+            return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?`${msg.value.amount} ${msg.value.denom.toString().toUpperCase()}`:''}common.fullStop</T></p>     
 
         case "profile/MsgUpdateProfile":
             return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?`with a username of ${msg.value.username}`:''}common.fullStop</T></p>     
         case "order/MsgCreateOrder":
             return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Order address={msg.value.originator} market={msg.value.market} price={msg.value.price} quantity={msg.value.quantity} side={msg.value.side} type={msg.value.type}/>:''}common.fullStop</T></p>     
         case "order/MsgCancelOrder":
-            return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?'':''}common.fullStop</T></p>     
+            return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?'':''}</T></p>     
         
         case "liquiditypool/ClaimPoolRewards":
             return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Pool address={msg.value.originator} pool={msg.value.pool_id} type="1"/>:''}common.fullStop</T></p>     

@@ -52,21 +52,21 @@ export const MsgType = (props) => {
 
         // tradehub
     case "coin/MsgWithdraw":
-        return <Badge color="order"><T>messageTypes.messageWithdrawTx</T></Badge>;
+        return <Badge color="success"><T>messageTypes.messageWithdrawTx</T></Badge>;
     case "profile/MsgUpdateProfile":
-        return <Badge color="order"><T>messageTypes.profileUpdated</T></Badge>;
+        return <Badge color="info"><T>messageTypes.profileUpdated</T></Badge>;
     case "order/MsgCreateOrder":
         return <Badge color="order"><T>messageTypes.orderCreated</T></Badge>;
     case "order/MsgCancelOrder":
         return <Badge color="order"><T>messageTypes.orderCancelled</T></Badge>;
     case "liquiditypool/ClaimPoolRewards":
-        return <Badge color="order"><T>messageTypes.claimPoolRewards</T></Badge>;
+        return <Badge color="pool"><T>messageTypes.claimPoolRewards</T></Badge>;
     case "liquiditypool/RemoveLiquidity":
-        return <Badge color="order"><T>messageTypes.removeLiquidity</T></Badge>;
+        return <Badge color="pool"><T>messageTypes.removeLiquidity</T></Badge>;
     case "liquiditypool/AddLiquidity":
-        return <Badge color="order"><T>messageTypes.addLiquidity</T></Badge>;
+        return <Badge color="pool"><T>messageTypes.addLiquidity</T></Badge>;
     case "liquiditypool/StakePoolToken":
-        return <Badge color="order"><T>messageTypes.stakePoolToken</T></Badge>;
+        return <Badge color="pool"><T>messageTypes.stakePoolToken</T></Badge>;
 
     default:
         return <Badge color="primary">{props.type}</Badge>;
