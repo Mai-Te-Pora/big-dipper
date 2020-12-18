@@ -6,7 +6,7 @@ export default class Order extends Component{
 
         this.state = {
             originator: this.props.originator,
-            market: this.props.market,
+            market: (this.props.market).toUpperCase(),
             price: this.props.price,
             quantity: this.props.quantity,
             side: this.props.side,
@@ -16,7 +16,7 @@ export default class Order extends Component{
 
     render(){
         return <span className="order overflow-auto d-inline">
-            {this.state.type} {this.state.side} on {this.state.market}, quantity: {this.state.quantity} 
+            {this.state.type} {this.state.side} on {this.state.market}, quantity: {this.state.quantity}, price: {this.state.price} 
         </span>
     }
 }

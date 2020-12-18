@@ -140,10 +140,20 @@ export default class Activites extends Component {
             return <MsgType type={msg.type} />
 
             // tradehub
+        case "ccm/MsgProcessCrossChainTx":
+            switch(parseFloat(msg.value.FromChainId)) {
+                case 2:
+                    return <p>Cross-Chain Transaction from NEO</p>     
+                case 4:
+                    return <p>Cross-Chain Transaction from Ethereum</p>     
+                default:
+                    return <p>Cross-Chain Transaction from Ethereum</p>     
+            }
         case "order/MsgCreateOrder":
             return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Order address={msg.value.originator} market={msg.value.market} price={msg.value.price} quantity={msg.value.quantity} side={msg.value.side} type={msg.value.type}/>:''}common.fullStop</T></p>     
         case "order/MsgCancelOrder":
             return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Order address={msg.value.originator} market={msg.value.market} price={msg.value.price} quantity={msg.value.quantity} side={msg.value.side} type={msg.value.type}/>:''}common.fullStop</T></p>     
+        
         case "liquiditypool/ClaimPoolRewards":
             return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Pool address={msg.value.originator} pool={msg.value.pool_id} type="1"/>:''}common.fullStop</T></p>     
         case "liquiditypool/RemoveLiquidity":
