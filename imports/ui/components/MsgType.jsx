@@ -52,7 +52,9 @@ export const MsgType = (props) => {
 
         // tradehub
     case "order/MsgCreateOrder":
-        return <Badge color="#4276e6"><T>messageTypes.orderCreated</T></Badge>;
+        return <Badge color="order"><T>messageTypes.orderCreated</T></Badge>;
+    case "order/MsgCancelOrder":
+        return <Badge color="order"><T>messageTypes.orderCancelled</T></Badge>;
 
     default:
         return <Badge color="primary">{props.type}</Badge>;
