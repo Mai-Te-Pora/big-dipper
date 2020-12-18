@@ -87,8 +87,8 @@ export default class Activites extends Component {
             console.log(events)
             
             if (events['withdraw_rewards'][0] && events['withdraw_rewards'][0].value) {
-                    const valueAmounts = events['withdraw_rewards'][0]
-                    const valueAmountsArr = events['withdraw_rewards'][0].split(',')
+                    const valueAmounts = events['withdraw_rewards'][0].value
+                    const valueAmountsArr = valueAmounts.split(',')
                     switch(valueAmountsArr.length) {
                         default:
                             return <p><Account address={msg.value.delegator_address}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /> {(!this.props.invalid)?<T _purify={false} amount={new Coin(parseInt(valueAmountsArr[0]), valueAmountsArr[0]?valueAmountsArr[0].replace(/[0-9]/g, ''):valueAmountsArr[0]).toString(8)}>activities.ofAmount</T>:''} <T>activities.from</T> <Account address={msg.value.validator_address} /><T>common.fullStop</T></p>
