@@ -231,5 +231,9 @@ messageTypes:
     unjail: 'Un-Джейл'
     IBCTransfer: 'IBC Трансферт'
     IBCReceive: 'IBC Получение'
-    orderCreated: Create Order
+    orderCreated: 'Create Order'
+    orderCancelled: 'Cancel Order'
+    claimPoolRewards: 'Claim Pool Rewards'
+    addLiquidity: 'Add Liquidity'
+    removeLiquidity: 'Remove Liquidity'
 

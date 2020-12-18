@@ -239,4 +239,8 @@ messageTypes:
     unjail: 'Unjail'
     IBCTransfer: 'IBC Transfer'
     IBCReceive: 'IBC Receive'
-    orderCreated: Create Order
+    orderCreated: 'Create Order'
+    orderCancelled: 'Cancel Order'
+    claimPoolRewards: 'Claim Pool Rewards'
+    addLiquidity: 'Add Liquidity'
+    removeLiquidity: 'Remove Liquidity'

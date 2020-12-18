@@ -240,4 +240,8 @@ messageTypes:
     unjail: 'Unjail'
     IBCTransfer: 'Wyślij IBC'
     IBCReceive: 'Odbierz IBC'
-    orderCreated: Create Order
+    orderCreated: 'Create Order'
+    orderCancelled: 'Cancel Order'
+    claimPoolRewards: 'Claim Pool Rewards'
+    addLiquidity: 'Add Liquidity'
+    removeLiquidity: 'Remove Liquidity'

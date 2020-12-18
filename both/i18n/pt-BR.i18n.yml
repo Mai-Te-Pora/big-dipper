@@ -239,4 +239,8 @@ messageTypes:
     unjail: 'Sair da jaula'
     IBCTransfer: 'IBC transferido'
     IBCReceive: 'IBC recebido'
-    orderCreated: Create Order
+    orderCreated: 'Create Order'
+    orderCancelled: 'Cancel Order'
+    claimPoolRewards: 'Claim Pool Rewards'
+    addLiquidity: 'Add Liquidity'
+    removeLiquidity: 'Remove Liquidity'

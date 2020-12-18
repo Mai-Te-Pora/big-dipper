@@ -55,6 +55,12 @@ export const MsgType = (props) => {
         return <Badge color="order"><T>messageTypes.orderCreated</T></Badge>;
     case "order/MsgCancelOrder":
         return <Badge color="order"><T>messageTypes.orderCancelled</T></Badge>;
+    case "order/ClaimPoolRewards":
+        return <Badge color="order"><T>messageTypes.claimPoolRewards</T></Badge>;
+    case "order/RemoveLiquidity":
+        return <Badge color="order"><T>messageTypes.removeLiquidity</T></Badge>;
+    case "order/AddLiquidity":
+        return <Badge color="order"><T>messageTypes.addLiquidity</T></Badge>;
 
     default:
         return <Badge color="primary">{props.type}</Badge>;

@@ -143,9 +143,13 @@ export default class Activites extends Component {
             return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Order address={msg.value.originator} market={msg.value.market} price={msg.value.price} quantity={msg.value.quantity} side={msg.value.side} type={msg.value.type}/>:''}common.fullStop</T></p>     
         case "order/MsgCancelOrder":
             return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Order address={msg.value.originator} market={msg.value.market} price={msg.value.price} quantity={msg.value.quantity} side={msg.value.side} type={msg.value.type}/>:''}common.fullStop</T></p>     
-        /*case "liquiditypool/ClaimPoolRewards":
-            return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T>common.fullStop</T></p>*/
-
+        case "liquiditypool/ClaimPoolRewards":
+            return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Pool address={msg.value.originator} pool={msg.value.pool_id} type="1"/>:''}common.fullStop</T></p>     
+        case "liquiditypool/RemoveLiquidity":
+            return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Pool address={msg.value.originator} pool={msg.value.pool_id} shares={msg.value.shares} type="2"/>:''}common.fullStop</T></p>     
+        case "liquiditypool/AddLiquidity":
+            return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Pool address={msg.value.originator} pool={msg.value.pool_id} shares={msg.value.shares} type="3"/>:''}common.fullStop</T></p>     
+    
         default:
             return <div><JSONPretty id="json-pretty" data={msg.value}></JSONPretty></div>
         }
