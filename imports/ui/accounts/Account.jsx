@@ -86,6 +86,7 @@ export default class AccountDetails extends Component{
                     }, this)
 
                     this.state.total.forEach((total, i) => {
+                    console.log(total)
                     if(total.denom === Meteor.settings.public.bondDenom )
                         this.state.total[i].amount = parseFloat(this.state.total[i].amount) + parseFloat(this.state.delegated);
                     }, this)
