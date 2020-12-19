@@ -16,8 +16,6 @@ showdown.setFlavor('github');
 
 export const TransactionRow = (props) => {
     let tx = props.tx;
-    console.log('tx')
-    console.log(tx)
      
     return <SentryBoundary><Row className={(tx.code)?"tx-info invalid":"tx-info"}>
         <Col xs={12} lg={7} className="activity">{(tx.tx.value.msg && tx.tx.value.msg.length >0)?tx.tx.value.msg.map((msg,i) => {

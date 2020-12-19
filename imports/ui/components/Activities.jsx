@@ -166,7 +166,9 @@ export default class Activites extends Component {
         case "liquiditypool/AddLiquidity":
             return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Pool address={msg.value.originator} pool={msg.value.pool_id} shares={msg.value.min_shares} amountA={msg.value.amount_a} amountB={msg.value.amount_b} type="3"/>:''}common.fullStop</T></p>     
         case "liquiditypool/StakePoolToken":
-            return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Pool address={msg.value.originator} pool={msg.value.pool_id} amount={msg.value.amount} duration={msg.value.duration} denom={msg.value.denom.toString().toUpperCase()} type="4"/>:''}common.fullStop</T></p>     
+            return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Pool address={msg.value.originator} pool={msg.value.pool_id} amount={msg.value.amount} duration={msg.value.duration} denom={msg.value.denom.toString().toUpperCase()} type="4"/>:''}common.fullStop</T></p>
+        case "liquiditypool/UnstakePoolToken":
+            return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Pool address={msg.value.originator} pool={msg.value.pool_id} amount={msg.value.amount} denom={msg.value.denom.toString().toUpperCase()} type="5"/>:''}common.fullStop</T></p>     
         
         default:
             return <div><JSONPretty id="json-pretty" data={msg.value}></JSONPretty></div>

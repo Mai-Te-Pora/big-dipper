@@ -35,6 +35,10 @@ export default class Order extends Component{
                 return <span className="order overflow-auto d-inline">
                     of {this.state.amount} shares for {this.state.duration} days, on {this.state.denom}
                 </span>
+            case 5: // unstake
+            return <span className="order overflow-auto d-inline">
+                of {this.state.amount} shares from {this.state.denom}
+            </span>
             default:
                 return <span className="order overflow-auto d-inline">
                 </span>

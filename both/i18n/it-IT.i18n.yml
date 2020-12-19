@@ -246,5 +246,6 @@ messageTypes:
     addLiquidity: 'Add Liquidity'
     removeLiquidity: 'Remove Liquidity'
     stakePoolToken: 'Stake Pool Token'
+    unstakePoolToken: 'Unstake Pool Token'
     profileUpdated: 'Updated profile'
     messageWithdrawTx: 'Withdrew from Tradehub'
