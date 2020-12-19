@@ -84,7 +84,7 @@ export default class Activites extends Component {
             console.log('events')
             console.log(events)
         
-            if (events['withdraw_commission'][0] && events['withdraw_commission'][0].value) {
+            if (events['withdraw_commission'] && events['withdraw_commission'][0] && events['withdraw_commission'][0].value) {
                 const valueAmounts = events['withdraw_commission'][0].value
                 const valueAmountsArr = valueAmounts.split(',')
                 switch(valueAmountsArr.length) {
@@ -107,7 +107,7 @@ export default class Activites extends Component {
             console.log('events')
             console.log(events)
             
-            if (events['withdraw_rewards'][0] && events['withdraw_rewards'][0].value) {
+            if (events['withdraw_rewards'] && events['withdraw_rewards'][0] && events['withdraw_rewards'][0].value) {
                 const valueAmounts = events['withdraw_rewards'][0].value
                 const valueAmountsArr = valueAmounts.split(',')
                 switch(valueAmountsArr.length) {
