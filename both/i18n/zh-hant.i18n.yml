@@ -248,3 +248,4 @@ messageTypes:
     unstakePoolToken: 'Unstake Pool Token'
     profileUpdated: 'Updated profile'
     messageWithdrawTx: 'Withdrew from Tradehub'
+    createOracleVote: 'Created oracle vote'

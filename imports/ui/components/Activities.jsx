@@ -170,6 +170,9 @@ export default class Activites extends Component {
         case "liquiditypool/UnstakePoolToken":
             return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?<Pool address={msg.value.originator} pool={msg.value.pool_id} amount={msg.value.amount} denom={msg.value.denom.toString().toUpperCase()} type="5"/>:''}common.fullStop</T></p>     
         
+        case "oracle/MsgCreateVote":
+            return <p><Account address={msg.value.originator}/> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /><T> {(!this.props.invalid)?`for ${msg.value.oracle_id} with a price of $${msg.value.data}`:''}common.fullStop</T></p>     
+
         default:
             return <div><JSONPretty id="json-pretty" data={msg.value}></JSONPretty></div>
         }

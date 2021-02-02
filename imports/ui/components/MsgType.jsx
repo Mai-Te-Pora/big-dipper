@@ -69,6 +69,8 @@ export const MsgType = (props) => {
         return <Badge color="pool"><T>messageTypes.stakePoolToken</T></Badge>;
     case "liquiditypool/UnstakePoolToken":
         return <Badge color="pool"><T>messageTypes.unstakePoolToken</T></Badge>;
+    case "oracle/MsgCreateVote":
+        return <Badge color="info"><T>messageTypes.createOracleVote</T></Badge>;
 
     default:
         return <Badge color="primary">{props.type}</Badge>;
