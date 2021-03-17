@@ -16,11 +16,9 @@ const WalletRow = (props) => {
   return (
     <tr>
       <th scope="row">{index}</th>
+      <td className="balance">{new Coin(totalWithoutDecimals, denom).toStringPool()}</td>
       <td className="address">
         <Link to={"/account/" + wallet.address}>{wallet.address}</Link>
-      </td>
-      <td className="balance">
-        {new Coin(totalWithoutDecimals, denom).toStringPool()}
       </td>
       <td className="lastSeenTime">
         <TimeStamp time={wallet.last_seen_time} />
@@ -33,7 +31,7 @@ export default class List extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      walletsRows: null
+      walletsRows: null,
     };
   }
 
@@ -52,9 +50,7 @@ export default class List extends Component {
   buildRows(wallets, denom) {
     this.setState({
       walletsRows: wallets.map((wallet, i) => {
-        return (
-          <WalletRow key={i} index={i + 1} denom={denom} wallet={wallet} />
-        );
+        return <WalletRow key={i} index={i + 1} denom={denom} wallet={wallet} />;
       }),
     });
   }
@@ -79,11 +75,11 @@ export default class List extends Component {
                 <th className="rank">
                   <i class="fas fa-trophy"></i> <T>richList.rank</T>
                 </th>
-                <th className="address">
-                  <i class="fas fa-file-alt"></i> <T>richList.address</T>
-                </th>
                 <th className="balance">
                   <i class="fas fa-coins"></i> <T>richList.balance</T>
+                </th>
+                <th className="address">
+                  <i class="fas fa-file-alt"></i> <T>richList.address</T>
                 </th>
                 <th className="lastSeenTime">
                   <i class="fas fa-history"></i> <T>richList.lastSeenTime</T>
