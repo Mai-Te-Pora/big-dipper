@@ -131,7 +131,7 @@ Meteor.methods({
         // console.log(until);
         // get the current height in db
         let curr = Meteor.call('blocks.getCurrentHeight');
-        console.log(curr);
+        //console.log(curr);
         // loop if there's update in db
         if (until > curr) {
             SYNCING = true;
@@ -178,8 +178,8 @@ Meteor.methods({
                 this.unblock();
                 let url = RPC+'/block?height=' + height;
                 let analyticsData = {};
+                // console.log(url);
 
-                console.log(url);
                 try{
                     const bulkValidators = Validators.rawCollection().initializeUnorderedBulkOp();
                     const bulkValidatorRecords = ValidatorRecords.rawCollection().initializeUnorderedBulkOp();
@@ -240,14 +240,13 @@ Meteor.methods({
                         analyticsData.height = height;
 
                         let endGetHeightTime = new Date();
-                        console.log("Get height time: "+((endGetHeightTime-startGetHeightTime)/1000)+"seconds.");
-
+                        // console.log("Get height time: "+((endGetHeightTime-startGetHeightTime)/1000)+"seconds.");
 
                         let startGetValidatorsTime = new Date();
                         // update chain status
                         url = RPC+`/validators?height=${height}&page=1&per_page=100`;
                         response = HTTP.get(url);
-                        console.log(url);
+                        // console.log(url);
                         let validators = JSON.parse(response.content);
                         validators.result.block_height = parseInt(validators.result.block_height);
                         ValidatorSets.insert(validators.result);
@@ -256,7 +255,7 @@ Meteor.methods({
                         let startBlockInsertTime = new Date();
                         Blockscon.insert(blockData);
                         let endBlockInsertTime = new Date();
-                        console.log("Block insert time: "+((endBlockInsertTime-startBlockInsertTime)/1000)+"seconds.");
+                        // console.log("Block insert time: "+((endBlockInsertTime-startBlockInsertTime)/1000)+"seconds.");
 
                         // store valdiators exist records
                         let existingValidators = Validators.find({address:{$exists:true}}).fetch();
@@ -331,7 +330,7 @@ Meteor.methods({
                         }
 
                         let endGetValidatorsTime = new Date();
-                        console.log("Get height validators time: "+((endGetValidatorsTime-startGetValidatorsTime)/1000)+"seconds.");
+                        // console.log("Get height validators time: "+((endGetValidatorsTime-startGetValidatorsTime)/1000)+"seconds.");
 
                         Chain.update({chainId:block.block.header.chain_id}, {$set:{lastSyncedTime:blockData.time, blockTime:blockTime}});
 
@@ -350,7 +349,7 @@ Meteor.methods({
                         let startFindValidatorsNameTime = new Date();
                         if (validators.result){
                             // validators are all the validators in the current height
-                            console.log("validatorSet size: "+validators.result.validators.length);
+                            //console.log("validatorSet size: "+validators.result.validators.length);
                             for (v in validators.result.validators){
                                 // Validators.insert(validators.result.validators[v]);
                                 let validator = validators.result.validators[v];
@@ -565,13 +564,13 @@ Meteor.methods({
                         }
 
                         let endFindValidatorsNameTime = new Date();
-                        console.log("Get validators name time: "+((endFindValidatorsNameTime-startFindValidatorsNameTime)/1000)+"seconds.");
+                        //console.log("Get validators name time: "+((endFindValidatorsNameTime-startFindValidatorsNameTime)/1000)+"seconds.");
 
                         // record for analytics
                         let startAnayticsInsertTime = new Date();
                         Analytics.insert(analyticsData);
                         let endAnalyticsInsertTime = new Date();
-                        console.log("Analytics insert time: "+((endAnalyticsInsertTime-startAnayticsInsertTime)/1000)+"seconds.");
+                        //console.log("Analytics insert time: "+((endAnalyticsInsertTime-startAnayticsInsertTime)/1000)+"seconds.");
 
                         let startVUpTime = new Date();
                         if (bulkValidators.length > 0){
@@ -587,7 +586,7 @@ Meteor.methods({
                         }
 
                         let endVUpTime = new Date();
-                        console.log("Validator update time: "+((endVUpTime-startVUpTime)/1000)+"seconds.");
+                        //console.log("Validator update time: "+((endVUpTime-startVUpTime)/1000)+"seconds.");
 
                         let startVRTime = new Date();
                         if (bulkValidatorRecords.length > 0){
@@ -599,7 +598,7 @@ Meteor.methods({
                         }
 
                         let endVRTime = new Date();
-                        console.log("Validator records update time: "+((endVRTime-startVRTime)/1000)+"seconds.");
+                        //console.log("Validator records update time: "+((endVRTime-startVRTime)/1000)+"seconds.");
 
                         if (bulkVPHistory.length > 0){
                             bulkVPHistory.execute((err, result) => {
@@ -669,7 +668,7 @@ Meteor.methods({
                                 createAt: new Date()
                             }
 
-                            console.log(vpDist);
+                            // console.log(vpDist);
 
                             VPDistributions.insert(vpDist);
                         }
@@ -682,7 +681,7 @@ Meteor.methods({
                     return "Stopped";
                 }
                 let endBlockTime = new Date();
-                console.log("This block used: "+((endBlockTime-startBlockTime)/1000)+"seconds.");
+                // console.log("This block used: "+((endBlockTime-startBlockTime)/1000)+"seconds.");
             }
             SYNCING = false;
             Chain.update({chainId:Meteor.settings.public.chainId}, {$set:{lastBlocksSyncedTime:new Date(), totalValidators:totalValidators}});
