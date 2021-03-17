@@ -283,7 +283,7 @@ body {
   }
   
   table {
-    &#block-table, &.random-validators, &.validator-list, &.proposal-list {
+    &#block-table, &.random-validators, &.validator-list, &.proposal-list, &.rich-list {
       table-layout: fixed;
       width: 100%;
       white-space: nowrap;
