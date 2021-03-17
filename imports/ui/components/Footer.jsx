@@ -47,6 +47,9 @@ export default class Footer extends React.Component {
                         <NavItem>
                             <NavLink tag={Link} to="/voting-power-distribution"><i className="material-icons">power_on</i></NavLink>
                         </NavItem>
+                        <NavItem>
+                            <NavLink tag={Link} to="/richlist"><i className="material-icons">money</i></NavLink>
+                        </NavItem>
                     </Nav>
                 </Navbar>
             </div>  
