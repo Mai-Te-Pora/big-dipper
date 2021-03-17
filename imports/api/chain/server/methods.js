@@ -209,8 +209,53 @@ Meteor.methods({
                         case 21:
                             chainStates.inflation = 1.378744971 / 100
                             break;
+                        case 22:
+                            chainStates.inflation = 1.355995679 / 100
+                            break;
+                        case 23:
+                            chainStates.inflation = 1.333621751 / 100
+                            break;
+                        case 24:
+                            chainStates.inflation = 1.311616992 / 100
+                            break;
+                        case 25:
+                            chainStates.inflation = 1.289975311 / 100
+                            break;
+                        case 26:
+                            chainStates.inflation = 1.268690719 / 100
+                            break;
+                        case 27:
+                            chainStates.inflation = 1.247757322 / 100
+                            break;
+                        case 28:
+                            chainStates.inflation = 1.227169326 / 100
+                            break;
+                        case 29:
+                            chainStates.inflation = 1.206921032 / 100
+                            break;
+                        case 30:
+                            chainStates.inflation = 1.187006835 / 100
+                            break;
+                        case 31:
+                            chainStates.inflation = 1.167421222 / 100
+                            break;
+                        case 29:
+                            chainStates.inflation = 1.148158772 / 100
+                            break;
+                        case 30:
+                            chainStates.inflation = 1.129214152 / 100
+                            break;
+                        case 31:
+                            chainStates.inflation = 1.110582119 / 100
+                            break;
+                        case 29:
+                            chainStates.inflation = 1.092257514 / 100
+                            break;
+                        case 30:
+                            chainStates.inflation = 1.074235265 / 100
+                            break;
                         default:
-                            chainStates.inflation = 1.35 / 100
+                            chainStates.inflation = 1.074235265 / 100
                             break;
                     }
 
