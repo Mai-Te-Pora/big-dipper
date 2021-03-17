@@ -1,50 +1,94 @@
 {
-    "public":{
-        "chainName": "Tradehub",
-        "chainId": "switcheo-tradehub-1",
-        "stakingFraction": 100000000,
-        "slashingWindow": 3600,
-        "uptimeWindow": 100,
-        "initialPageSize": 30,
-        "secp256k1": false,
-        "bech32PrefixAccAddr": "swth",
-        "bech32PrefixAccPub": "swthpub",
-        "bech32PrefixValAddr": "swthvaloper",
-        "bech32PrefixValPub": "swthvaloperpub",
-        "bech32PrefixConsAddr": "swthvalcons",
-        "bech32PrefixConsPub": "swthvalconspub",
-        "bondDenom": "swth",
-        "coins": [
-
-            {
-                "denom": "swth",
-                "displayName": "SWTH",
-                "displayNamePlural": "SWTH",
-                "fraction": 100000000
-            }
-        ],
-        "gasPrice": 0.02,
-        "coingeckoId": "switcheo"
-    },  
-    "genesisFile": "https://raw.githubusercontent.com/vincentgeneste/big-dipper/master/genesis.json",
-    "remote":{
-        "rpc":"http://135.181.19.50:26659",
-        "lcd":"http://135.181.19.50:1317"
-    }, 
-    "debug": {
-        "startTimer": true,
-        "readGenesis": true
-    }, 
-    "params":{ 
-        "startHeight": 0,
-        "defaultBlockTime": 1000,
-        "blockInterval": 15000,
-        "consensusInterval": 1000,
-        "statusInterval":7500,
-        "signingInfoInterval": 1800000,
-        "proposalInterval": 5000,
-        "missedBlocksInterval": 60000,
-        "delegationInterval": 900000
-    }
+  "public": {
+    "chainName": "Tradehub",
+    "chainId": "switcheo-tradehub-1",
+    "stakingFraction": 100000000,
+    "slashingWindow": 3600,
+    "uptimeWindow": 100,
+    "initialPageSize": 30,
+    "secp256k1": false,
+    "bech32PrefixAccAddr": "swth",
+    "bech32PrefixAccPub": "swthpub",
+    "bech32PrefixValAddr": "swthvaloper",
+    "bech32PrefixValPub": "swthvaloperpub",
+    "bech32PrefixConsAddr": "swthvalcons",
+    "bech32PrefixConsPub": "swthvalconspub",
+    "bondDenom": "swth",
+    "coins": [
+      {
+        "denom": "swth",
+        "displayName": "SWTH",
+        "displayNamePlural": "SWTH",
+        "fraction": 100000000
+      },
+      {
+        "denom": "usdc1",
+        "displayName": "USDC",
+        "displayNamePlural": "USDC",
+        "fraction": 1000000000000000000
+      },
+      {
+        "denom": "wbtc1",
+        "displayName": "WBTC",
+        "displayNamePlural": "WBTC",
+        "fraction": 100000000
+      },
+      {
+        "denom": "eth1",
+        "displayName": "ETH",
+        "displayNamePlural": "ETH",
+        "fraction": 1000000000000000000
+      },
+      {
+        "denom": "flm1",
+        "displayName": "FLM",
+        "displayNamePlural": "FLM",
+        "fraction": 100000000
+      },
+      {
+        "denom": "cel1",
+        "displayName": "CEL",
+        "displayNamePlural": "CEL",
+        "fraction": 100000000
+      },
+      {
+        "denom": "nex1",
+        "displayName": "NEX",
+        "displayNamePlural": "NEX",
+        "fraction": 100000000
+      },
+      {
+        "denom": "nneo2",
+        "displayName": "NNEO",
+        "displayNamePlural": "NNEO",
+        "fraction": 100000000
+      }
+    ],
+    "gasPrice": 0.02,
+    "coingeckoId": "switcheo"
+  },
+  "genesisFile": "https://raw.githubusercontent.com/vincentgeneste/big-dipper/master/genesis.json",
+  "remote": {
+    "rpc": "http://135.181.19.50:26659",
+    "lcd": "http://135.181.19.50:1317"
+  },
+  "mtp": {
+    "richListEndpointBaseUrl": "http://135.181.178.159:8001",
+    "priceEndpointBaseUrl": "http://135.181.178.159:8002"
+  },
+  "debug": {
+    "startTimer": true,
+    "readGenesis": true
+  },
+  "params": {
+    "startHeight": 0,
+    "defaultBlockTime": 1000,
+    "blockInterval": 15000,
+    "consensusInterval": 1000,
+    "statusInterval": 7500,
+    "signingInfoInterval": 1800000,
+    "proposalInterval": 5000,
+    "missedBlocksInterval": 60000,
+    "delegationInterval": 900000
+  }
 }
-

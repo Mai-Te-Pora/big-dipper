@@ -31,6 +31,7 @@ navbar:
     transactions: 'Transactions'
     proposals: 'Proposals'
     votingPower: 'Voting Power'
+    richlist: 'Rich List'
     lang: "ENG"
     english: "English"
     french: "Français"
@@ -250,4 +251,12 @@ messageTypes:
     profileUpdated: 'Updated profile'
     messageWithdrawTx: 'Withdrew from Tradehub'
     createOracleVote: 'Created oracle vote'
+richList:
+    richList: 'Rich List'
+    lead: 'Discover the richest addresses of Switcheo TradeHub.'
+    notFound: 'No wallet found.'
+    rank: 'Rank'
+    address: 'Address'
+    balance: 'Balance'
+    lastSeenTime: 'Last Seen Time (UTC)'
 
