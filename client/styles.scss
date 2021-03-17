@@ -294,6 +294,14 @@ body {
       overflow: hidden;
       text-overflow: ellipsis;
     }
+
+    .rich-list-wrapper .table thead th {
+      white-space: nowrap;
+    }
+
+    .rich-list-wrapper .table-striped tbody tr {
+      white-space: nowrap;
+  }
   
     //th.voting-power, td.voting-power {
       //text-align: right;
@@ -764,7 +772,7 @@ body {
     }
   
     .mobile-menu li {
-      width: 16.66%;
+      width: 13.66%;
   
       a {
         text-align: center;
