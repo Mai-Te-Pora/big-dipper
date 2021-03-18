@@ -24,6 +24,14 @@ body {
     font-size: inherit !important;
   }
 
+  .rich-list-wrapper .table thead th {
+    white-space: nowrap;
+  }
+
+  .rich-list-wrapper .table-striped tbody tr {
+    white-space: nowrap;
+  }
+
   .uppercase { 
     text-transform: uppercase; 
   }
@@ -295,14 +303,6 @@ body {
       text-overflow: ellipsis;
     }
 
-    .rich-list-wrapper .table thead th {
-      white-space: nowrap;
-    }
-
-    .rich-list-wrapper .table-striped tbody tr {
-      white-space: nowrap;
-  }
-  
     //th.voting-power, td.voting-power {
       //text-align: right;
     //}
