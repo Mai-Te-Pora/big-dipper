@@ -74,6 +74,12 @@
         "displayName": "BUSD",
         "displayNamePlural": "BUSD",
         "fraction": 1000000000000000000
+      },
+      {
+        "denom": "btcb1",
+        "displayName": "BTCB",
+        "displayNamePlural": "BTCB",
+        "fraction": 1000000000000000000
       }
     ],
     "gasPrice": 0.02,
