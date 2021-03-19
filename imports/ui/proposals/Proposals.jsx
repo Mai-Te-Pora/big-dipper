@@ -27,8 +27,8 @@ export default class Proposals extends Component{
     render() {
         return <div>
             <Helmet>
-                <title>Governance Proposals on Tradehub</title>
-                <meta name="description" content="Tradehub incorporates on-chain governance. Come to see how on-chain governance can be achieved on Tradehub." />
+                <title>Governance Proposals on TradeHub</title>
+                <meta name="description" content="TradeHub incorporates on-chain governance. Come to see how on-chain governance can be achieved on TradeHub." />
             </Helmet>
             <Row>
                 <Col md={3} xs={12}><h1 className="d-none d-lg-block"><T>proposals.proposals</T></h1></Col>

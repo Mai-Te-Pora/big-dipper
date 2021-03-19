@@ -282,7 +282,7 @@ export default class Proposal extends Component{
 
                 return <div>
                     <Helmet>
-                        <title>{this.props.proposal.content.value.title} | Tradehub Explorer</title>
+                        <title>{this.props.proposal.content.value.title} | TradeHub Explorer</title>
                         <meta name="description" content={this.props.proposal.content.value.description} />
                     </Helmet>
 

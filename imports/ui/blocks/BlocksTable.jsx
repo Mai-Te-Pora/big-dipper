@@ -77,8 +77,8 @@ export default class BlocksTable extends Component {
     render(){
         return <div>
             <Helmet>
-                <title>Latest Blocks on Tradehub</title>
-                <meta name="description" content="Latest blocks committed by validators on Tradehub" />
+                <title>Latest Blocks on TradeHub</title>
+                <meta name="description" content="Latest blocks committed by validators on TradeHub" />
             </Helmet>
             <Row>
                 <Col md={3} xs={12}><h1 className="d-none d-lg-block"><T>blocks.latestBlocks</T></h1></Col>
