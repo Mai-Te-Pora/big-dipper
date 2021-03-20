@@ -1,6 +1,6 @@
 {
   "public": {
-    "chainName": "Tradehub",
+    "chainName": "TradeHub",
     "chainId": "switcheo-tradehub-1",
     "stakingFraction": 100000000,
     "slashingWindow": 3600,

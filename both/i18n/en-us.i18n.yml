@@ -24,7 +24,7 @@ common:
     retry: 'Retry'
     rewards: 'Rewards'
 navbar:
-    siteName: 'Tradehub Explorer'
+    siteName: 'TradeHub Explorer'
     version: '1.8'
     validators: 'Validators'
     blocks: 'Blocks'
@@ -249,7 +249,7 @@ messageTypes:
     stakePoolToken: 'Stake Pool Token'
     unstakePoolToken: 'Unstake Pool Token'
     profileUpdated: 'Updated profile'
-    messageWithdrawTx: 'Withdrew from Tradehub'
+    messageWithdrawTx: 'Withdrew from TradeHub'
     createOracleVote: 'Created oracle vote'
 richList:
     richList: 'Rich List'

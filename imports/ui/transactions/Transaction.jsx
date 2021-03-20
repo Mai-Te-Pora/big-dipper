@@ -33,7 +33,7 @@ export default class Transaction extends Component {
         return (
           <Container id="transaction">
             <Helmet>
-              <title>Transaction {tx.txhash} on Tradehub</title>
+              <title>Transaction {tx.txhash} on TradeHub</title>
               <meta name="description" content={"Details of transaction " + tx.txhash} />
             </Helmet>
             <h4>
